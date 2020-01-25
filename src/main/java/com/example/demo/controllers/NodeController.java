@@ -22,9 +22,9 @@ public class NodeController {
         nodeService.deleteNode(node_id);
     }
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public void update(@RequestParam int oldNode_id,String newType, String newName, String newDescription,
-                       int root_id, int parent_id){
-        nodeService.updateNode(oldNode_id,newType, newName, newDescription, root_id, parent_id);
+    public void update(@RequestParam String parentNodeIdentifier,@RequestParam String childNodeIdentifier,
+                       @RequestParam  String newType, @RequestParam String newName,@RequestParam  String newDescription){
+        nodeService.updateNodeСhild(parentNodeIdentifier,childNodeIdentifier,newType,newName,newDescription);
     }
 
 

@@ -14,7 +14,7 @@ public class NodeService {
     public NodeService(NodeRepository nodeRepository) {
         this.nodeRepository = nodeRepository;
     }
-
+    @Transactional
     public void createNode(String type, String name, String description, int root_id, int parent_id) {
         Node node = new Node();
         node.setName(name);
@@ -34,5 +34,9 @@ public class NodeService {
         deleteNode(oldNode_id);
         createNode(newType, newName, newDescription, root_id, parent_id);
 
+    }
+    public boolean updateNodeСhild(String parentNodeIdentifier,String childNodeIdentifier,
+                String newType, String newName, String newDescription) {
+     return nodeRepository.updateChild(parentNodeIdentifier,childNodeIdentifier,newType,newName,newDescription);
     }
 }
