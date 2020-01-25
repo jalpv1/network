@@ -9,6 +9,16 @@ public class Node {
     private String name;
     private String description;
     private Map<String,String> params;
+
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
+    }
+
+    private String identifier;
     public Node(){
         params = new HashMap<>();
     }

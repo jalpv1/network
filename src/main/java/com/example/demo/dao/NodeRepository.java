@@ -22,11 +22,18 @@ public class NodeRepository {
         jdbcTemplate.update(NodeQuery.CREATE_NODE, node.getType(), node.getName(),
                 node.getDescription());
         int node_id = jdbcTemplate.queryForObject(NodeQuery.GET_NODES_ID, Integer.class);
+        createIdentifier(node_id,node);
         if (!node.getParams().isEmpty()) {
             addParams(node.getParams(), node_id);
         }
         addHierarchy(node_id, parent_id, root_id);
 
+    }
+
+    private void createIdentifier(int id, Node node) {
+        StringBuilder identifier = new StringBuilder(node.getType() + id);
+        Object[] params = new Object[]{ identifier ,id};
+        jdbcTemplate.update(NodeQuery.UPDATE_NODE_IDENTIFIER,params);
     }
 
     private void addParams(Map<String, String> params, int node_id) {
@@ -40,9 +47,9 @@ public class NodeRepository {
     }
 
     public void deleteNode(int node_id) {
-        jdbcTemplate.update(NodeQuery.DELETE_NODE,node_id);
-        jdbcTemplate.update(NodeQuery.DELETE_PARAMS,node_id);
-        jdbcTemplate.update(NodeQuery.DELETE_HIERARCHY,node_id,node_id,node_id);
+        jdbcTemplate.update(NodeQuery.DELETE_NODE, node_id);
+        jdbcTemplate.update(NodeQuery.DELETE_PARAMS, node_id);
+        jdbcTemplate.update(NodeQuery.DELETE_HIERARCHY, node_id, node_id, node_id);
     }
 
 }

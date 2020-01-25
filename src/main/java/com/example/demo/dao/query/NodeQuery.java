@@ -6,7 +6,7 @@ public class NodeQuery {
     public static  final String TYPE ="type";
     public static  final String NAME = "name";
     public static  final String DESCRIPTIOPN  ="description";
-
+    public static final  String IDENTIFIER ="identifier";
     public static  final String TABLE_NAME_PARAMS ="node_params";
     public static  final String PARAM_NAME ="param_name";
     public static  final String VALUE = "param_value";
@@ -25,11 +25,19 @@ public class NodeQuery {
 
     public static final String DELETE_NODE = "DELETE  FROM "+TABLE_NAME_NODE_INFO +"" +
             " WHERE  "+NODE_ID + " =(?)";
+   // public static final String UPDATE_NODE_IDENTIFIER = "UPDATE "+TABLE_NAME_NODE_INFO +" SET "+ IDENTIFIER + " = (?) "+ " WHERE  "+NODE_ID + " = (?)";
+
+    public static final String UPDATE_NODE_IDENTIFIER = "UPDATE " + TABLE_NAME_NODE_INFO + " SET " +
+            IDENTIFIER + "=(?) "
+            +  " WHERE " + NODE_ID + "=(?)";
     public static final String DELETE_PARAMS = "DELETE  FROM "+TABLE_NAME_PARAMS +"" +
             " WHERE  "+NODE_ID + " =(?)";
     public static final String SELECT_CHILD = "SELECT "+NODE_ID+"  FROM "+TABLE_NAME_HIERARCHY +
             " " +
             " WHERE  " + PARENT_ID + " =(?)" ;
+    public static final String SELECT_ROOT = "SELECT "+ROOT_ID+"  FROM "+TABLE_NAME_HIERARCHY +
+            " " +
+            " WHERE  " + PARENT_ID + " =(?)"+" LIMIT 1" ;
     public static final String DELETE_HIERARCHY = "DELETE  FROM "+TABLE_NAME_HIERARCHY +"" +
             " WHERE  "+NODE_ID + " =(?)" + " OR " +PARENT_ID + " =(?)" + " OR "
             + ROOT_ID + " =(?)";
