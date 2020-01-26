@@ -24,19 +24,19 @@ public class NodeRepository {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public void createNode(Node node, int root_id, int parent_id) {
+    public void createNode(Node node, int parentId, int rootId) {
 
         jdbcTemplate.update(NodeQuery.CREATE_NODE, node.getType(), node.getName(),
                 node.getDescription());
-        int node_id = jdbcTemplate.queryForObject(NodeQuery.GET_NODES_ID, Integer.class);
-        createIdentifier(node_id, node);
+        int nodeId = jdbcTemplate.queryForObject(NodeQuery.GET_NODES_ID, Integer.class);
+        createIdentifier(nodeId, node);
         if (!node.getParams().isEmpty()) {
-            addParams(node.getParams(), node_id);
+            addParams(node.getParams(), nodeId);
         }
         if (node.getType().equals("network")) {
-            root_id = node_id;
+            rootId = nodeId;
         }
-        addHierarchy(node_id, parent_id, root_id);
+        addHierarchy(nodeId, parentId, rootId);
 
     }
 
@@ -79,12 +79,12 @@ public class NodeRepository {
     }
 
     public boolean updateChild(String parentNodeIdentifier, String childNodeIdentifier,
-                               String newType, String newName, String newDescription) {
+                               Node node) {
 
         Integer parentId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, parentNodeIdentifier);
         Integer childId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, childNodeIdentifier);
       //  int count =
-        Object[] params = new Object[]{newType, newName, newDescription,childNodeIdentifier,childId};
+        Object[] params = new Object[]{node.getType(), node.getName(), node.getDescription(),childNodeIdentifier,childId};
         if (Objects.requireNonNull(jdbcTemplate.queryForObject(NodeQuery.CHECK_HIERARCHY, Integer.class, parentId, childId)).equals(1)) {
             jdbcTemplate.update(NodeQuery.UPDATE_NODE, params);
         }
