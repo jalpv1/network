@@ -63,4 +63,11 @@ public class NodeQuery {
             " WHERE  " + IDENTIFIER + " =(?)";
     public static final String CHECK_HIERARCHY = "SELECT count(*)" + " FROM "+ TABLE_NAME_HIERARCHY + " WHERE " + PARENT_ID +"=(?) "
             + " AND "+ NODE_ID +"=(?) ";
+
+    public static final String SELECT_HIERARCHY_NETWORK_BY_ROOT = "SELECT  "
+            + TABLE_NAME_NODE_INFO + "." + NODE_ID + " , "+ TYPE+ " , "+ NAME + " , "+ DESCRIPTIOPN+ " , "
+            + IDENTIFIER + " FROM " + TABLE_NAME_NODE_INFO + " INNER JOIN "+ TABLE_NAME_HIERARCHY + " h" +
+            " ON " + TABLE_NAME_NODE_INFO + "." + NODE_ID + " = "+ "h."+NODE_ID + " WHERE " + ROOT_ID + " =(?)";
+
+
 }

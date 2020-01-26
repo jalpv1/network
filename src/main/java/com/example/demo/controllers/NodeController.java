@@ -7,10 +7,9 @@ import org.springframework.web.bind.annotation.*;
 import com.example.demo.services.NodeService;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/node")
 public class NodeController {
     private final NodeService nodeService;
-
 
     @Autowired
     NodeController(NodeService nodeService) {
@@ -18,7 +17,7 @@ public class NodeController {
     }
 
     //@RequestMapping(value = "/create", method = RequestMethod.POST)
-    @PostMapping(path = "/create", consumes = "application/json/{parentId}/{rootId}")
+    @PostMapping(path = "/create/{parentId}/{rootId}", consumes = "application/json")
     public void createNode(@RequestBody String jsonNode, @PathVariable int parentId, @PathVariable int rootId) {
         Node node = JsonParser.toJavaObject(jsonNode);
         nodeService.createNode(node, parentId, rootId);
