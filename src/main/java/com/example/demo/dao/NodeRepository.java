@@ -1,6 +1,9 @@
 package com.example.demo.dao;
 
 import com.example.demo.dao.mappers.NodeMapper;
+//import com.example.demo.dao.query.NodeQuery;
+import  com.example.demo.dao.*;
+
 import com.example.demo.dao.query.NodeQuery;
 import com.example.demo.entity.Node;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +13,7 @@ import org.springframework.stereotype.Repository;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @Repository
 public class NodeRepository {
@@ -67,7 +71,7 @@ public class NodeRepository {
         jdbcTemplate.update(NodeQuery.DELETE_HIERARCHY_NODE, node_id);
         List<Node> children = jdbcTemplate.query(NodeQuery.SELECT_HIERARCHY_NODE_CHILDREN, new Object[]{node_id}, new NodeMapper());
         for (Node child : children) {
-            jdbcTemplate.update(NodeQuery.ADD_HIERARCHY, child.getId(), parentId, rootId);
+            jdbcTemplate.update(NodeQuery.ADD_HIERARCHY, child.getidDB(), parentId, rootId);
         }
 
         jdbcTemplate.update(NodeQuery.DELETE_HIERARCHY_CHILDREN, node_id);
@@ -81,7 +85,7 @@ public class NodeRepository {
         Integer childId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, childNodeIdentifier);
       //  int count =
         Object[] params = new Object[]{newType, newName, newDescription,childNodeIdentifier,childId};
-        if (jdbcTemplate.queryForObject(NodeQuery.CHECK_HIERARCHY, Integer.class, parentId, childId).intValue() == 1) {
+        if (Objects.requireNonNull(jdbcTemplate.queryForObject(NodeQuery.CHECK_HIERARCHY, Integer.class, parentId, childId)).equals(1)) {
             jdbcTemplate.update(NodeQuery.UPDATE_NODE, params);
         }
         return false;

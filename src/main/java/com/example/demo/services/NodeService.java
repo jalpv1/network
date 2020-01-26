@@ -35,7 +35,7 @@ public class NodeService {
         createNode(newType, newName, newDescription, root_id, parent_id);
 
     }
-    public boolean updateNodeСhild(String parentNodeIdentifier,String childNodeIdentifier,
+    public boolean updateNodeChild(String parentNodeIdentifier,String childNodeIdentifier,
                 String newType, String newName, String newDescription) {
      return nodeRepository.updateChild(parentNodeIdentifier,childNodeIdentifier,newType,newName,newDescription);
     }
