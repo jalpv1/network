@@ -51,23 +51,23 @@ public class NetworkService {
                 initParentId(nodeFirstInQueue.getChildren(), nodeFirstInQueue.getIdentifier());
                 nodes.addAll(nodeFirstInQueue.getChildren());
             }
-            nodeRepository.createNode(nodeFirstInQueue, nodeFirstInQueue.getParentId(), rootId);
+            //nodeRepository.createNode(nodeFirstInQueue, nodeFirstInQueue.getParentId(), rootId);
         }
     }
 
     @Transactional
     public void updateNetwork(Node node) {
-        int rootId = nodeRepository.createNode(node, 0, 0);
+       nodeRepository.updateRootNode(node);
         initParentId(node.getChildren(), node.getIdentifier());
         Queue<Node> nodes = new ArrayDeque<>(node.getChildren());
         while (!nodes.isEmpty()) {
             Node nodeFirstInQueue = Objects.requireNonNull(nodes.poll());
-            nodeRepository.createNode(nodeFirstInQueue, nodeFirstInQueue.getParentId(), rootId);
+            nodeRepository.updateChild(nodeRepository.getNodeById(nodeFirstInQueue.getParentId()).getIdentifier(),
+                    nodeFirstInQueue.getIdentifier(),nodeFirstInQueue);
             if (!nodeFirstInQueue.getChildren().isEmpty()) {
                 initParentId(nodeFirstInQueue.getChildren(), nodeFirstInQueue.getIdentifier());
                 nodes.addAll(nodeFirstInQueue.getChildren());
             }
-            nodeRepository.createNode(nodeFirstInQueue, nodeFirstInQueue.getParentId(), rootId);
         }
     }
     public void initParentId(List<Node> children, String parentIdentifier) {

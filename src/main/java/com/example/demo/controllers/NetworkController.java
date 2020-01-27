@@ -28,5 +28,9 @@ public class NetworkController {
     }
 
 
-
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    public void updateNetwork(@RequestBody String nodeJson) {
+        Node node = JsonParser.toJavaObject(nodeJson);
+        networkService.updateNetwork(node);
+    }
 }

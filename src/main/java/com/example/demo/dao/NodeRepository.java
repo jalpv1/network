@@ -98,11 +98,30 @@ public class NodeRepository {
         }
         return false;
     }
+    public boolean updateRootNode(Node node) {
+        Object[] params =
+                new Object[]{node.getType(), node.getName(), node.getDescription(), node.getIdentifier()};
+            jdbcTemplate.update(NodeQuery.UPDATE_ROOT, params);
+            if(!node.getParams().isEmpty()){
+                updateParams(node.getParams(),node.getIdDB());
+            }
+
+        return false;
+    }
 
     public Integer getIdByidentifier(String identifier) {
         return jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, identifier);
 
     }
+    public Node getNodeById( int id){
+        List<Node> node =  jdbcTemplate.query(NodeQuery.SELECT_NODE_BY_ID,new Object[]{id},new NodeMapper());
+        if(node.isEmpty()){
+            return null;
+        }
+        return node.get(0);
+
+    }
+
 
 
 }

@@ -35,6 +35,9 @@ public class NodeQuery {
     public static final String SELECT_CHILD = "SELECT " + NODE_ID + "  FROM " + TABLE_NAME_HIERARCHY +
             " " +
             " WHERE  " + PARENT_ID + " =(?)";
+    public static final String SELECT_NODE_BY_ID = "SELECT * " + "  FROM " + TABLE_NAME_NODE_INFO +
+            " " +
+            " WHERE  " + NODE_ID + " =(?)";
     public static final String SELECT_ROOT = "SELECT " + ROOT_ID + "  FROM " + TABLE_NAME_HIERARCHY +
             " " +
             " WHERE  " + PARENT_ID + " =(?)" + " LIMIT 1";
@@ -58,6 +61,9 @@ public class NodeQuery {
              TYPE+  "=(?) "+ " , "+ NAME + "=(?) " + " , "+ DESCRIPTIOPN + "=(?) "+ " , "+
             IDENTIFIER + "=(?) "
             + " WHERE " + NODE_ID + "=(?)";
+    public static final String UPDATE_ROOT = "UPDATE " + TABLE_NAME_NODE_INFO + " SET " +
+            TYPE+  "=(?) "+ " , "+ NAME + "=(?) " + " , "+ DESCRIPTIOPN + "=(?) "
+            + " WHERE " + IDENTIFIER + "=(?)";
     public static final String UPDATE_PARAMS = "UPDATE " + TABLE_NAME_PARAMS+ " SET " +
             PARAM_NAME+  "=(?) "+ " , "+ VALUE + "=(?) "
             + " WHERE " + NODE_ID + "=(?)" + " AND "+ PARAM_NAME +"=(?)";
