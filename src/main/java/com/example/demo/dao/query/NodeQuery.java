@@ -49,34 +49,44 @@ public class NodeQuery {
     public static final String SELECT_HIERARCHY_NODE_ROOT = "SELECT " + ROOT_ID + " FROM " + TABLE_NAME_HIERARCHY + "" +
             " WHERE  " + NODE_ID + " =(?)";
     public static final String SELECT_HIERARCHY_NODE_CHILDREN = "SELECT  "
-            + TABLE_NAME_NODE_INFO + "." + NODE_ID + " , "+ TYPE+ " , "+ NAME + " , "+ DESCRIPTIOPN+ " , "
-            + IDENTIFIER + " FROM " + TABLE_NAME_NODE_INFO + " INNER JOIN "+ TABLE_NAME_HIERARCHY + " h" +
-            " ON " + TABLE_NAME_NODE_INFO + "." + NODE_ID + " = "+ "h."+NODE_ID + " WHERE " + PARENT_ID + " =(?)";
+            + TABLE_NAME_NODE_INFO + "." + NODE_ID + " , " + TYPE + " , " + NAME + " , " + DESCRIPTIOPN + " , "
+            + IDENTIFIER + " FROM " + TABLE_NAME_NODE_INFO + " INNER JOIN " + TABLE_NAME_HIERARCHY + " h" +
+            " ON " + TABLE_NAME_NODE_INFO + "." + NODE_ID + " = " + "h." + NODE_ID + " WHERE " + PARENT_ID + " =(?)";
     //SELECT nodes_info.node_id,type,name,description,identifier FROM nodes_info INNER JOIN hierarchy h on nodes_info.node_id = h.node_id;
     public static final String DELETE_HIERARCHY_NODE = "DELETE  FROM " + TABLE_NAME_HIERARCHY + "" +
             " WHERE  " + NODE_ID + " =(?)";
     public static final String DELETE_HIERARCHY_CHILDREN = "DELETE  FROM " + TABLE_NAME_HIERARCHY + "" +
             " WHERE  " + PARENT_ID + " =(?)";
     public static final String UPDATE_NODE = "UPDATE " + TABLE_NAME_NODE_INFO + " SET " +
-             TYPE+  "=(?) "+ " , "+ NAME + "=(?) " + " , "+ DESCRIPTIOPN + "=(?) "+ " , "+
+            TYPE + "=(?) " + " , " + NAME + "=(?) " + " , " + DESCRIPTIOPN + "=(?) " + " , " +
             IDENTIFIER + "=(?) "
             + " WHERE " + NODE_ID + "=(?)";
     public static final String UPDATE_ROOT = "UPDATE " + TABLE_NAME_NODE_INFO + " SET " +
-            TYPE+  "=(?) "+ " , "+ NAME + "=(?) " + " , "+ DESCRIPTIOPN + "=(?) "
+            TYPE + "=(?) " + " , " + NAME + "=(?) " + " , " + DESCRIPTIOPN + "=(?) "
             + " WHERE " + IDENTIFIER + "=(?)";
-    public static final String UPDATE_PARAMS = "UPDATE " + TABLE_NAME_PARAMS+ " SET " +
-            PARAM_NAME+  "=(?) "+ " , "+ VALUE + "=(?) "
-            + " WHERE " + NODE_ID + "=(?)" + " AND "+ PARAM_NAME +"=(?)";
+    public static final String UPDATE_PARAMS = "UPDATE " + TABLE_NAME_PARAMS + " SET " +
+            PARAM_NAME + "=(?) " + " , " + VALUE + "=(?) "
+            + " WHERE " + NODE_ID + "=(?)" + " AND " + PARAM_NAME + "=(?)";
     public static final String GET_ID_BY_IDENTIFIER = "SELECT " + NODE_ID + "  FROM " + TABLE_NAME_NODE_INFO +
             " " +
             " WHERE  " + IDENTIFIER + " =(?)";
-    public static final String CHECK_HIERARCHY = "SELECT count(*)" + " FROM "+ TABLE_NAME_HIERARCHY + " WHERE " + PARENT_ID +"=(?) "
-            + " AND "+ NODE_ID +"=(?) ";
+    public static final String CHECK_HIERARCHY = "SELECT count(*)" + " FROM " + TABLE_NAME_HIERARCHY + " WHERE " + PARENT_ID + "=(?) "
+            + " AND " + NODE_ID + "=(?) ";
 
     public static final String SELECT_HIERARCHY_NETWORK_BY_ROOT = "SELECT  "
-            + TABLE_NAME_NODE_INFO + "." + NODE_ID + " , "+ TYPE+ " , "+ NAME + " , "+ DESCRIPTIOPN+ " , "
-            + IDENTIFIER + " FROM " + TABLE_NAME_NODE_INFO + " INNER JOIN "+ TABLE_NAME_HIERARCHY + " h" +
-            " ON " + TABLE_NAME_NODE_INFO + "." + NODE_ID + " = "+ "h."+NODE_ID + " WHERE " + ROOT_ID + " =(?)";
+            + TABLE_NAME_NODE_INFO + "." + NODE_ID + " , " + TYPE + " , " + NAME + " , " + DESCRIPTIOPN + " , "
+            + IDENTIFIER + " FROM " + TABLE_NAME_NODE_INFO + " INNER JOIN " + TABLE_NAME_HIERARCHY + " h" +
+            " ON " + TABLE_NAME_NODE_INFO + "." + NODE_ID + " = " + "h." + NODE_ID + " WHERE " + ROOT_ID + " =(?)";
 
+    public static final String SELECT_ROOTS = "SELECT DISTINCT "
+            + TABLE_NAME_NODE_INFO + "." + NODE_ID + " , " + TYPE + " , " + NAME + " , " + DESCRIPTIOPN + " , "
+            + IDENTIFIER + " FROM " + TABLE_NAME_NODE_INFO + " INNER JOIN " + TABLE_NAME_HIERARCHY + " h" +
+            " ON " + TABLE_NAME_NODE_INFO + "." + NODE_ID + " = " + "h." + ROOT_ID;
+    public static final String CONDITION_SEARCH_BY_NAME = " WHERE " + NAME + " ILIKE " + "(?)";
+    public static final String CONDITION_SEARCH_BY_NAME_NODE = " AND " + NAME + " ILIKE " + "(?)";
 
+    public static final String SELECT_HIERARCHY_NODES = "SELECT  "
+            + TABLE_NAME_NODE_INFO + "." + NODE_ID + " , " + TYPE + " , " + NAME + " , " + DESCRIPTIOPN + " , "
+            + IDENTIFIER + " FROM " + TABLE_NAME_NODE_INFO + " INNER JOIN " + TABLE_NAME_HIERARCHY + " h" +
+            " ON " + TABLE_NAME_NODE_INFO + "." + NODE_ID + " = " + "h." + NODE_ID;
 }

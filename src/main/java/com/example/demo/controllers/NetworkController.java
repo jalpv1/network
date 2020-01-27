@@ -7,6 +7,8 @@ import com.example.demo.services.NodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/network")
 public class NetworkController {
@@ -33,4 +35,13 @@ public class NetworkController {
         Node node = JsonParser.toJavaObject(nodeJson);
         networkService.updateNetwork(node);
     }
+    @RequestMapping(value = "/search/root", method = RequestMethod.GET)
+    public List<Node> searchInRootByName(@RequestParam String name) {
+        return networkService.searchInRootByName(name);
+    }
+    @RequestMapping(value = "/search/node", method = RequestMethod.GET)
+    public List<Node> searchInNodesByName(String name, String roodIdentifier){
+        return networkService.searchInNodesByName(name,roodIdentifier);
+    }
+
 }

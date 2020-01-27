@@ -57,25 +57,34 @@ public class NetworkService {
 
     @Transactional
     public void updateNetwork(Node node) {
-       nodeRepository.updateRootNode(node);
+        nodeRepository.updateRootNode(node);
         initParentId(node.getChildren(), node.getIdentifier());
         Queue<Node> nodes = new ArrayDeque<>(node.getChildren());
         while (!nodes.isEmpty()) {
             Node nodeFirstInQueue = Objects.requireNonNull(nodes.poll());
             nodeRepository.updateChild(nodeRepository.getNodeById(nodeFirstInQueue.getParentId()).getIdentifier(),
-                    nodeFirstInQueue.getIdentifier(),nodeFirstInQueue);
+                    nodeFirstInQueue.getIdentifier(), nodeFirstInQueue);
             if (!nodeFirstInQueue.getChildren().isEmpty()) {
                 initParentId(nodeFirstInQueue.getChildren(), nodeFirstInQueue.getIdentifier());
                 nodes.addAll(nodeFirstInQueue.getChildren());
             }
         }
     }
-    public void initParentId(List<Node> children, String parentIdentifier) {
+
+    private void initParentId(List<Node> children, String parentIdentifier) {
         int parentIdDb = nodeRepository.getIdByidentifier(parentIdentifier);
         for (Node child : children) {
             child.setParentId(parentIdDb);
         }
     }
 
+    public List<Node> searchInRootByName(String name) {
+        return networkRepository.searchInRootByName(name);
+    }
+
+    public List<Node> searchInNodesByName(String name, String roodIdentifier) {
+        int rootId = nodeRepository.getIdByidentifier(roodIdentifier);
+        return networkRepository.searchInNodesByName(name,rootId);
+    }
 
 }

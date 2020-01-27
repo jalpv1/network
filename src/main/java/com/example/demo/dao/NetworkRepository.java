@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -24,5 +25,11 @@ public class NetworkRepository {
             jdbcTemplate.update(NodeQuery.DELETE_NODE, node.getIdDB());
 
         }
+    }
+    public List<Node> searchInRootByName(String name){
+       return jdbcTemplate.query(NodeQuery.SELECT_ROOTS+ NodeQuery.CONDITION_SEARCH_BY_NAME, new Object[]{"%"+name+"%"}, new NodeMapper());
+    }
+    public List<Node> searchInNodesByName(String name,int rootId){
+        return jdbcTemplate.query(NodeQuery.SELECT_HIERARCHY_NETWORK_BY_ROOT + NodeQuery.CONDITION_SEARCH_BY_NAME_NODE, new Object[]{rootId,"%"+name+"%"}, new NodeMapper());
     }
 }
