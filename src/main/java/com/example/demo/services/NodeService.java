@@ -16,6 +16,7 @@ public class NodeService {
     }
     @Transactional
     public void createNode(Node node, int parentId, int rootId) {
+
         nodeRepository.createNode(node, parentId, rootId);
     }
 

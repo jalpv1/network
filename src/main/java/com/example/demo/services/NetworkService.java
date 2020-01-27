@@ -41,8 +41,9 @@ public class NetworkService {
 
     @Transactional
     public void createNetwork(Node node) {
-        int rootId = nodeRepository.createNode(node, 0, 0);
-        initParentId(node.getChildren(), node.getIdentifier());
+       // int rootId = nodeRepository.createNode(node, 0, 0);
+        int rootId = 0;
+                initParentId(node.getChildren(), node.getIdentifier());
         Queue<Node> nodes = new ArrayDeque<>(node.getChildren());
         while (!nodes.isEmpty()) {
             Node nodeFirstInQueue = Objects.requireNonNull(nodes.poll());
