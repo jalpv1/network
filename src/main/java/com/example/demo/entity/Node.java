@@ -3,6 +3,7 @@ package com.example.demo.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,6 +11,9 @@ import java.util.Map;
 public class Node {
     @JsonIgnore
     private int idDB;
+    @JsonIgnore
+    private int parentId;
+
 
     @JsonProperty("id")
     private String identifier;
@@ -20,7 +24,7 @@ public class Node {
     @JsonProperty("description")
     private String description;
     @JsonProperty("params")
-    private Map<String,String> params;
+    private Map<String, String> params;
     @JsonProperty("children")
     private List<Node> children;
 
@@ -41,16 +45,20 @@ public class Node {
     }
 
 
-    public Node(){
+    public Node() {
         params = new HashMap<>();
+        children = new ArrayList<>();
     }
-    public int getidDB() {
+
+    /*public int getidDB() {
         return idDB;
     }
 
     public void setidDB(int id) {
         this.idDB = id;
     }
+
+     */
 
     public String getType() {
         return type;
@@ -84,5 +92,19 @@ public class Node {
         this.params = params;
     }
 
+    public int getIdDB() {
+        return idDB;
+    }
 
+    public void setIdDB(int idDB) {
+        this.idDB = idDB;
+    }
+
+    public int getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(int parentId) {
+        this.parentId = parentId;
+    }
 }

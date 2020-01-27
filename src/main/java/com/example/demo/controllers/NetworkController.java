@@ -1,12 +1,11 @@
 package com.example.demo.controllers;
 
+import com.example.demo.config.JsonParser;
+import com.example.demo.entity.Node;
 import com.example.demo.services.NetworkService;
 import com.example.demo.services.NodeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/network")
@@ -21,6 +20,13 @@ public class NetworkController {
     public void deleteNetwork(@PathVariable String rootIdentifier) {
         networkService.deleteNetwork(rootIdentifier);
     }
+
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    public void createNetwork(@RequestBody String nodeJson) {
+        Node node = JsonParser.toJavaObject(nodeJson);
+        networkService.createNetwork(node);
+    }
+
 
 
 }

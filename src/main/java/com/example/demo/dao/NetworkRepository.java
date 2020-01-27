@@ -21,7 +21,7 @@ public class NetworkRepository {
         Integer rootId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, rootIdentifier);
         List<Node> networkNodes = jdbcTemplate.query(NodeQuery.SELECT_HIERARCHY_NETWORK_BY_ROOT, new Object[]{rootId}, new NodeMapper());
         for (Node node:networkNodes) {
-            jdbcTemplate.update(NodeQuery.DELETE_NODE, node.getidDB());
+            jdbcTemplate.update(NodeQuery.DELETE_NODE, node.getIdDB());
 
         }
     }

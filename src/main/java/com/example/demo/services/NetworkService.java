@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.*;
+
 @Service
 public class NetworkService {
     private final NetworkRepository networkRepository;
@@ -24,16 +26,49 @@ public class NetworkService {
         networkRepository.deleteNetwork(rootIdentinier);
     }
 
-    public void createNetwork(Node node) {
-        int rootId = node.getidDB();
-        int parentId = node.getidDB();
+    public void createNetworkREc(Node node) {
+        //   int rootId = node.getidDB();
+        //int parentId = node.getidDB();
 
         if (node.getChildren().size() != 0) {
             for (Node n : node.getChildren()) {
-                createNetwork(n);
+                createNetworkREc(n);
             }
         }
-        nodeRepository.createNode(node, rootId, parentId);
+        // nodeRepository.createNode(node, rootId, parentId);
 
     }
+
+    @Transactional
+    public void createNetwork(Node node) {
+        //создади корень и запомнили айди
+        int rootId = nodeRepository.createNode(node, 0, 0);
+        initParentId(node.getChildren(), node.getIdentifier());
+        // инициализировали детьми корня очередь
+        Queue<Node> nodes = new ArrayDeque<>(node.getChildren());
+        //если у него есть дети то и очередь полная
+        while (!nodes.isEmpty()) {
+            //создаем єлемент удаляя его из очереди
+            Node nodeFirstInQueue = Objects.requireNonNull(nodes.poll());
+            nodeRepository.createNode(nodeFirstInQueue, nodeFirstInQueue.getParentId(), rootId);
+            //берем всех детей первого єлемента и вставляем их в очередь
+            if (!nodeFirstInQueue.getChildren().isEmpty()) {
+                initParentId(nodeFirstInQueue.getChildren(), nodeFirstInQueue.getIdentifier());
+                nodes.addAll(nodeFirstInQueue.getChildren());
+
+            }
+            //но следующим может біть его брат!!!
+            nodeRepository.createNode(nodeFirstInQueue, nodeFirstInQueue.getParentId(), rootId);
+
+        }
+    }
+
+    public void initParentId(List<Node> children, String parentIdentifier) {
+        int parentIdDb = nodeRepository.getIdByidentifier(parentIdentifier);
+        for (Node child : children) {
+            child.setParentId(parentIdDb);
+        }
+    }
+
+
 }

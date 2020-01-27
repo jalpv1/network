@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class NodeMapper  implements RowMapper<Node> {
     public Node mapRow(ResultSet resultSet,int i) throws SQLException {
         Node node = new Node();
-        node.setidDB(resultSet.getInt(NodeQuery.NODE_ID));
+        node.setIdDB(resultSet.getInt(NodeQuery.NODE_ID));
         node.setType(resultSet.getString(NodeQuery.TYPE));
         node.setName(resultSet.getString(NodeQuery.NAME));
         node.setDescription(resultSet.getString(NodeQuery.DESCRIPTIOPN));
