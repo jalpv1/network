@@ -58,6 +58,9 @@ public class NodeQuery {
              TYPE+  "=(?) "+ " , "+ NAME + "=(?) " + " , "+ DESCRIPTIOPN + "=(?) "+ " , "+
             IDENTIFIER + "=(?) "
             + " WHERE " + NODE_ID + "=(?)";
+    public static final String UPDATE_PARAMS = "UPDATE " + TABLE_NAME_PARAMS+ " SET " +
+            PARAM_NAME+  "=(?) "+ " , "+ VALUE + "=(?) "
+            + " WHERE " + NODE_ID + "=(?)" + " AND "+ PARAM_NAME +"=(?)";
     public static final String GET_ID_BY_IDENTIFIER = "SELECT " + NODE_ID + "  FROM " + TABLE_NAME_NODE_INFO +
             " " +
             " WHERE  " + IDENTIFIER + " =(?)";

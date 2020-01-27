@@ -52,7 +52,11 @@ public class NodeRepository {
             jdbcTemplate.update(NodeQuery.ADD_PARAMS, node_id, pair.getKey(), pair.getValue());
         }
     }
-
+    private void updateParams(Map<String, String> newParams, int node_id) {
+        for (Map.Entry<String, String> pair : newParams.entrySet()) {
+            jdbcTemplate.update(NodeQuery.UPDATE_PARAMS, pair.getKey(), pair.getValue(), node_id,pair.getKey());
+        }
+    }
     private void addHierarchy(int node_id, int parent_id, int root_id) {
         jdbcTemplate.update(NodeQuery.ADD_HIERARCHY, node_id, parent_id, root_id);
     }
@@ -88,6 +92,9 @@ public class NodeRepository {
         Object[] params = new Object[]{node.getType(), node.getName(), node.getDescription(), childNodeIdentifier, childId};
         if (Objects.requireNonNull(jdbcTemplate.queryForObject(NodeQuery.CHECK_HIERARCHY, Integer.class, parentId, childId)).equals(1)) {
             jdbcTemplate.update(NodeQuery.UPDATE_NODE, params);
+            if(!node.getParams().isEmpty()){
+                updateParams(node.getParams(),childId);
+            }
         }
         return false;
     }
