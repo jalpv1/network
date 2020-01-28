@@ -1,6 +1,7 @@
 package com.example.demo.services.validators;
 
 import com.example.demo.entity.Node;
+import com.example.demo.services.exeption.HierarchyException;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -17,9 +18,17 @@ public class ValidatorManager {
         validateMap.put("FEEDER", new CreateFeeder());
         validateMap.put("RESOURCE", new CreateResource());
     }
-
-    public boolean validate(Node node,Node parentNode) {
-       return validateMap.get(node.getType().toUpperCase()).typeValid(node)
-               && validateMap.get(node.getType().toUpperCase()).hierarchyCheck(parentNode);
+    private   boolean  childValid (Node node) {
+        return ! node.getType().equalsIgnoreCase("Network");
+    }
+    public boolean validate(Node node,Node parentNode) throws HierarchyException {
+        String type = node.getType().toUpperCase();
+        //validateMap.get(node.getType().toUpperCase()).typeValid(node) &&
+       if( !(validateMap.get(node.getType().toUpperCase()).typeValid(node)
+               ||childValid(node)
+               ||validateMap.get(type).hierarchyCheck(parentNode))){
+           throw new  HierarchyException ();
+       }
+       return true;
     }
 }

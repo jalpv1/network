@@ -6,6 +6,7 @@ import com.example.demo.dao.*;
 
 import com.example.demo.dao.query.NodeQuery;
 import com.example.demo.entity.Node;
+import com.example.demo.services.exeption.HierarchyException;
 import com.example.demo.services.validators.ValidatorManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -20,28 +21,16 @@ import java.util.Objects;
 public class NodeRepository {
     private final JdbcTemplate jdbcTemplate;
     private final ValidatorManager validatorManager;
+
     @Autowired
-    public NodeRepository(JdbcTemplate jdbcTemplate,ValidatorManager validatorManager) {
+    public NodeRepository(JdbcTemplate jdbcTemplate, ValidatorManager validatorManager) {
         this.jdbcTemplate = jdbcTemplate;
         this.validatorManager = validatorManager;
     }
 
-    public boolean createNode(Node node, int parentId, int rootId) {
-       if(validatorManager.validate(node,getNodeById(parentId))) {
-           jdbcTemplate.update(NodeQuery.CREATE_NODE, node.getType(), node.getName(),
-                   node.getDescription());
-           int nodeId = jdbcTemplate.queryForObject(NodeQuery.GET_NODES_ID, Integer.class);
-           createIdentifier(nodeId, node);
-           if (!node.getParams().isEmpty()) {
-               addParams(node.getParams(), nodeId);
-           }
-           addHierarchy(nodeId, parentId, rootId);
-           return true;
-      }
-       return false;
-    }
-
-    public int createNode(Node node) {
+    public int createNode(Node node, int parentId, int rootId) throws HierarchyException {
+        Node parent = getNodeById(parentId);
+        validatorManager.validate(node, parent);
         jdbcTemplate.update(NodeQuery.CREATE_NODE, node.getType(), node.getName(),
                 node.getDescription());
         int nodeId = jdbcTemplate.queryForObject(NodeQuery.GET_NODES_ID, Integer.class);
@@ -49,10 +38,27 @@ public class NodeRepository {
         if (!node.getParams().isEmpty()) {
             addParams(node.getParams(), nodeId);
         }
+        addHierarchy(nodeId, parentId, rootId);
+        return nodeId;
+
+    }
+
+    public int createNode(Node node) {
+
+        jdbcTemplate.update(NodeQuery.CREATE_NODE, node.getType(), node.getName(),
+                node.getDescription());
+        int nodeId = jdbcTemplate.queryForObject(NodeQuery.GET_NODES_ID, Integer.class);
+        createIdentifier(nodeId, node);
 
         addHierarchy(nodeId, 0, nodeId);
+        if (!node.getParams().isEmpty()) {
+            addParams(node.getParams(), nodeId);
+
+        }
         return nodeId;
     }
+
+
 
     private void createIdentifier(int id, Node node) {
         StringBuilder identifier = new StringBuilder(node.getType() + id);
@@ -99,12 +105,14 @@ public class NodeRepository {
 
     }
 
-    public boolean updateChild(String parentNodeIdentifier, String childNodeIdentifier,
-                               Node node) {
+    public void updateChild(String parentNodeIdentifier, String childNodeIdentifier,
+                            Node node) throws HierarchyException {
 
         Integer parentId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, parentNodeIdentifier);
         Integer childId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, childNodeIdentifier);
         //  int count =
+        Node parent = getNodeById(getIdByidentifier(parentNodeIdentifier));
+        validatorManager.validate(node, parent);
         Object[] params = new Object[]{node.getType(), node.getName(), node.getDescription(), childNodeIdentifier, childId};
         if (Objects.requireNonNull(jdbcTemplate.queryForObject(NodeQuery.CHECK_HIERARCHY, Integer.class, parentId, childId)).equals(1)) {
             jdbcTemplate.update(NodeQuery.UPDATE_NODE, params);
@@ -112,7 +120,6 @@ public class NodeRepository {
                 updateParams(node.getParams(), childId);
             }
         }
-        return false;
     }
 
     public boolean updateRootNode(Node node) {

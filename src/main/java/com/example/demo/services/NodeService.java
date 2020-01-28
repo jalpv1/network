@@ -2,6 +2,7 @@ package com.example.demo.services;
 
 import com.example.demo.dao.NodeRepository;
 import com.example.demo.entity.Node;
+import com.example.demo.services.exeption.HierarchyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +16,7 @@ public class NodeService {
         this.nodeRepository = nodeRepository;
     }
     @Transactional
-    public void createNode(Node node, int parentId, int rootId) {
+    public void createNode(Node node, int parentId, int rootId)throws HierarchyException {
 
         nodeRepository.createNode(node, parentId, rootId);
     }
@@ -32,8 +33,8 @@ public class NodeService {
  //      createNode(newType, newName, newDescription, root_id, parent_id);
 
     }
-    public boolean updateNodeChild(String parentNodeIdentifier,String childNodeIdentifier,
-                Node node) {
-     return nodeRepository.updateChild(parentNodeIdentifier,childNodeIdentifier,node);
+    public void updateNodeChild(String parentNodeIdentifier,String childNodeIdentifier,
+                Node node) throws HierarchyException{
+      nodeRepository.updateChild(parentNodeIdentifier,childNodeIdentifier,node);
     }
 }

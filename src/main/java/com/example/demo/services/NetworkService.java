@@ -3,6 +3,7 @@ package com.example.demo.services;
 import com.example.demo.dao.NetworkRepository;
 import com.example.demo.dao.NodeRepository;
 import com.example.demo.entity.Node;
+import com.example.demo.services.exeption.HierarchyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,7 +41,7 @@ public class NetworkService {
     }
 
     @Transactional
-    public void createNetwork(Node node) {
+    public void createNetwork(Node node) throws HierarchyException {
        // int rootId = nodeRepository.createNode(node, 0, 0);
         int rootId = 0;
                 initParentId(node.getChildren(), node.getIdentifier());
@@ -57,12 +58,13 @@ public class NetworkService {
     }
 
     @Transactional
-    public void updateNetwork(Node node) {
+    public void updateNetwork(Node node) throws HierarchyException{
         nodeRepository.updateRootNode(node);
         initParentId(node.getChildren(), node.getIdentifier());
         Queue<Node> nodes = new ArrayDeque<>(node.getChildren());
         while (!nodes.isEmpty()) {
             Node nodeFirstInQueue = Objects.requireNonNull(nodes.poll());
+
             nodeRepository.updateChild(nodeRepository.getNodeById(nodeFirstInQueue.getParentId()).getIdentifier(),
                     nodeFirstInQueue.getIdentifier(), nodeFirstInQueue);
             if (!nodeFirstInQueue.getChildren().isEmpty()) {
