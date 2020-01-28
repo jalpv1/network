@@ -6,8 +6,10 @@ import com.example.demo.services.exeption.HierarchyException;
 public class CreateTransformer implements Validator{
     @Override
     public boolean hierarchyCheck(Node parentNode) {
-        return !(parentNode.getType().equalsIgnoreCase("Network") ||
-                parentNode.getType().equalsIgnoreCase("Substation")||
-                        parentNode.getType().equalsIgnoreCase("Resource"));
+        boolean f1 = parentNode.getType().equalsIgnoreCase("Network");
+        boolean f2 =parentNode.getType().equalsIgnoreCase("Substation");
+        boolean f3 = parentNode.getType().equalsIgnoreCase("Resource");
+        return (f1 ||
+                f2 );
     }
 }

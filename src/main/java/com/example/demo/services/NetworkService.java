@@ -43,12 +43,18 @@ public class NetworkService {
     @Transactional
     public void createNetwork(Node node) throws HierarchyException {
        // int rootId = nodeRepository.createNode(node, 0, 0);
-        int rootId = 0;
+        int rootId = nodeRepository.createNode(node);
                 initParentId(node.getChildren(), node.getIdentifier());
         Queue<Node> nodes = new ArrayDeque<>(node.getChildren());
         while (!nodes.isEmpty()) {
             Node nodeFirstInQueue = Objects.requireNonNull(nodes.poll());
-            nodeRepository.createNode(nodeFirstInQueue, nodeFirstInQueue.getParentId(), rootId);
+            try {
+                nodeRepository.createNode(nodeFirstInQueue, nodeFirstInQueue.getParentId(), rootId);
+
+            }
+            catch (HierarchyException h){
+                throw new HierarchyException();
+            }
             if (!nodeFirstInQueue.getChildren().isEmpty()) {
                 initParentId(nodeFirstInQueue.getChildren(), nodeFirstInQueue.getIdentifier());
                 nodes.addAll(nodeFirstInQueue.getChildren());

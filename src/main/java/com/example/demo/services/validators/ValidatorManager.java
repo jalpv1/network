@@ -19,14 +19,18 @@ public class ValidatorManager {
         validateMap.put("RESOURCE", new CreateResource());
     }
     private   boolean  childValid (Node node) {
-        return ! node.getType().equalsIgnoreCase("Network");
+        return node.getType().equalsIgnoreCase("Network");
     }
     public boolean validate(Node node,Node parentNode) throws HierarchyException {
         String type = node.getType().toUpperCase();
         //validateMap.get(node.getType().toUpperCase()).typeValid(node) &&
-       if( !(validateMap.get(node.getType().toUpperCase()).typeValid(node)
-               ||childValid(node)
-               ||validateMap.get(type).hierarchyCheck(parentNode))){
+        //validateMap.get(node.getType().toUpperCase()).typeValid(node)
+        //               ||childValid(node)
+        //
+        //               ||
+        Validator v  = validateMap.get(type);
+        boolean validation = v.hierarchyCheck(parentNode);
+       if( !validation ||childValid(node)){
            throw new  HierarchyException ();
        }
        return true;

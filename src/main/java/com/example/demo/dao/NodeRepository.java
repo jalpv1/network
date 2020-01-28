@@ -13,6 +13,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -39,6 +40,7 @@ public class NodeRepository {
             addParams(node.getParams(), nodeId);
         }
         addHierarchy(nodeId, parentId, rootId);
+        //   getParams();
         return nodeId;
 
     }
@@ -57,7 +59,6 @@ public class NodeRepository {
         }
         return nodeId;
     }
-
 
 
     private void createIdentifier(int id, Node node) {
@@ -144,6 +145,23 @@ public class NodeRepository {
             return null;
         }
         return node.get(0);
+
+    }
+
+    public Node getParams(Node node) {
+        List<Map<String, Object>> map =
+                jdbcTemplate.queryForList("Select param_name,param_value from node_params where node_id = (?)", node.getIdDB());
+        Map<String, String> params = new HashMap<>();
+        for (Map<String, Object> m : map) {
+            for (Map.Entry<String, Object> pair : m.entrySet()) {
+                params.put(pair.getKey(), (String) pair.getValue());
+            }
+
+        }
+
+        node.setParams(params);
+
+        return node;
 
     }
 

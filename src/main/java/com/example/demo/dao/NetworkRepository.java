@@ -12,11 +12,13 @@ import java.util.List;
 
 @Repository
 public class NetworkRepository {
-    private final JdbcTemplate jdbcTemplate;
+       private final JdbcTemplate jdbcTemplate;
+    private final NodeRepository nodeRepository;
 
     @Autowired
-    public NetworkRepository(JdbcTemplate jdbcTemplate) {
+    public NetworkRepository(JdbcTemplate jdbcTemplate,NodeRepository nodeRepository) {
         this.jdbcTemplate = jdbcTemplate;
+        this.nodeRepository = nodeRepository;
     }
     public void deleteNetwork(String rootIdentifier){
         Integer rootId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, rootIdentifier);
@@ -27,7 +29,12 @@ public class NetworkRepository {
         }
     }
     public List<Node> searchInRootByName(String name){
-       return jdbcTemplate.query(NodeQuery.SELECT_ROOTS+ NodeQuery.CONDITION_SEARCH_BY_NAME, new Object[]{"%"+name+"%"}, new NodeMapper());
+        List<Node>  nodes =
+                jdbcTemplate.query(NodeQuery.SELECT_ROOTS+ NodeQuery.CONDITION_SEARCH_BY_NAME, new Object[]{"%"+name+"%"}, new NodeMapper());
+        for (Node node :nodes) {
+           nodeRepository.getParams(node);
+        }
+        return nodes;
     }
     public List<Node> searchInNodesByName(String name,int rootId){
         return jdbcTemplate.query(NodeQuery.SELECT_HIERARCHY_NETWORK_BY_ROOT + NodeQuery.CONDITION_SEARCH_BY_NAME_NODE, new Object[]{rootId,"%"+name+"%"}, new NodeMapper());
