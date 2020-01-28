@@ -15,26 +15,22 @@ public class NodeService {
     public NodeService(NodeRepository nodeRepository) {
         this.nodeRepository = nodeRepository;
     }
-    @Transactional
-    public void createNode(Node node, int parentId, int rootId)throws HierarchyException {
 
-        nodeRepository.createNode(node, parentId, rootId);
+    @Transactional
+    public void createNode(Node node, String parentId, String rootId) throws HierarchyException {
+        int parentIdDB = nodeRepository.getIdByidentifier(parentId);
+        int rootIdDB = nodeRepository.getIdByidentifier(rootId);
+
+        nodeRepository.createNode(node, parentIdDB, rootIdDB);
     }
 
     @Transactional
-    public void deleteNode(int node_id) {
-        nodeRepository.deleteNode(node_id);
+    public void deleteNode(String nodeId) {
+        nodeRepository.deleteNode(nodeId);
     }
 
-    @Transactional
-    public void updateNode(int oldNode_id, String newType, String newName, String newDescription,
-                           int root_id, int parent_id) {
-        deleteNode(oldNode_id);
- //      createNode(newType, newName, newDescription, root_id, parent_id);
-
-    }
-    public void updateNodeChild(String parentNodeIdentifier,String childNodeIdentifier,
-                Node node) throws HierarchyException{
-      nodeRepository.updateChild(parentNodeIdentifier,childNodeIdentifier,node);
+    public void updateNodeChild(String parentNodeIdentifier, String childNodeIdentifier,
+                                Node node) throws HierarchyException {
+        nodeRepository.updateChild(parentNodeIdentifier, childNodeIdentifier, node);
     }
 }

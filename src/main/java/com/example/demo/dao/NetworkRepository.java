@@ -3,11 +3,12 @@ package com.example.demo.dao;
 import com.example.demo.dao.mappers.NodeMapper;
 import com.example.demo.dao.query.NodeQuery;
 import com.example.demo.entity.Node;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -35,6 +36,7 @@ public class NetworkRepository {
                 jdbcTemplate.query(NodeQuery.SELECT_ROOTS + NodeQuery.CONDITION_SEARCH_BY_NAME, new Object[]{"%" + name + "%"}, new NodeMapper());
         for (Node node : nodes) {
             nodeRepository.getParams(node);
+
         }
         return nodes;
     }

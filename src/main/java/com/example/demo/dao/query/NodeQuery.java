@@ -89,4 +89,6 @@ public class NodeQuery {
             + TABLE_NAME_NODE_INFO + "." + NODE_ID + " , " + TYPE + " , " + NAME + " , " + DESCRIPTIOPN + " , "
             + IDENTIFIER + " FROM " + TABLE_NAME_NODE_INFO + " INNER JOIN " + TABLE_NAME_HIERARCHY + " h" +
             " ON " + TABLE_NAME_NODE_INFO + "." + NODE_ID + " = " + "h." + NODE_ID;
+    public static final String GET_PARAMS = "SELECT " +PARAM_NAME + " , "+VALUE + " FROM "+ TABLE_NAME_PARAMS
+    +  " WHERE " + NODE_ID + " =(?) ";
 }

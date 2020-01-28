@@ -23,11 +23,11 @@ public class ValidatorManager {
     }
     public boolean validate(Node node,Node parentNode) throws HierarchyException {
         String type = node.getType().toUpperCase();
-        //validateMap.get(node.getType().toUpperCase()).typeValid(node) &&
-        //validateMap.get(node.getType().toUpperCase()).typeValid(node)
-        //               ||childValid(node)
-        //
-        //               ||
+        //        //validateMap.get(node.getType().toUpperCase()).typeValid(node) &&
+        //        //validateMap.get(node.getType().toUpperCase()).typeValid(node)
+        //        //               ||childValid(node)
+        //        //
+        //        //               ||
         Validator v  = validateMap.get(type);
         boolean validation = v.hierarchyCheck(parentNode);
        if( !validation ||childValid(node)){

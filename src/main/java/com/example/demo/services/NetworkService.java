@@ -23,26 +23,12 @@ public class NetworkService {
     }
 
     @Transactional
-    public void deleteNetwork(String rootIdentinier) {
-        networkRepository.deleteNetwork(rootIdentinier);
-    }
-
-    public void createNetworkREc(Node node) {
-        //   int rootId = node.getidDB();
-        //int parentId = node.getidDB();
-
-        if (node.getChildren().size() != 0) {
-            for (Node n : node.getChildren()) {
-                createNetworkREc(n);
-            }
-        }
-        // nodeRepository.createNode(node, rootId, parentId);
-
+    public void deleteNetwork(String rootIdentifier) {
+        networkRepository.deleteNetwork(rootIdentifier);
     }
 
     @Transactional
     public void createNetwork(Node node) throws HierarchyException {
-       // int rootId = nodeRepository.createNode(node, 0, 0);
         int rootId = nodeRepository.createNode(node);
                 initParentId(node.getChildren(), node.getIdentifier());
         Queue<Node> nodes = new ArrayDeque<>(node.getChildren());
@@ -59,7 +45,6 @@ public class NetworkService {
                 initParentId(nodeFirstInQueue.getChildren(), nodeFirstInQueue.getIdentifier());
                 nodes.addAll(nodeFirstInQueue.getChildren());
             }
-            //nodeRepository.createNode(nodeFirstInQueue, nodeFirstInQueue.getParentId(), rootId);
         }
     }
 

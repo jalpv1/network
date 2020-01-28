@@ -1,9 +1,6 @@
 package com.example.demo.dao;
 
 import com.example.demo.dao.mappers.NodeMapper;
-//import com.example.demo.dao.query.NodeQuery;
-import com.example.demo.dao.*;
-
 import com.example.demo.dao.query.NodeQuery;
 import com.example.demo.entity.Node;
 import com.example.demo.services.exeption.HierarchyException;
@@ -12,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,27 +25,24 @@ public class NodeRepository {
         this.validatorManager = validatorManager;
     }
 
-    public int createNode(Node node, int parentId, int rootId) throws HierarchyException {
+    public void createNode(Node node, int parentId, int rootId) throws HierarchyException {
         Node parent = getNodeById(parentId);
         validatorManager.validate(node, parent);
         jdbcTemplate.update(NodeQuery.CREATE_NODE, node.getType(), node.getName(),
                 node.getDescription());
-        int nodeId = jdbcTemplate.queryForObject(NodeQuery.GET_NODES_ID, Integer.class);
+        Integer nodeId = jdbcTemplate.queryForObject(NodeQuery.GET_NODES_ID, Integer.class);
         createIdentifier(nodeId, node);
         if (!node.getParams().isEmpty()) {
             addParams(node.getParams(), nodeId);
         }
         addHierarchy(nodeId, parentId, rootId);
-        //   getParams();
-        return nodeId;
-
     }
 
-    public int createNode(Node node) {
+    public Integer createNode(Node node) {
 
         jdbcTemplate.update(NodeQuery.CREATE_NODE, node.getType(), node.getName(),
                 node.getDescription());
-        int nodeId = jdbcTemplate.queryForObject(NodeQuery.GET_NODES_ID, Integer.class);
+        Integer nodeId = jdbcTemplate.queryForObject(NodeQuery.GET_NODES_ID, Integer.class);
         createIdentifier(nodeId, node);
 
         addHierarchy(nodeId, 0, nodeId);
@@ -61,38 +54,37 @@ public class NodeRepository {
     }
 
 
-    private void createIdentifier(int id, Node node) {
+    private void createIdentifier(Integer id, Node node) {
         StringBuilder identifier = new StringBuilder(node.getType() + id);
         Object[] params = new Object[]{identifier, id};
         node.setIdentifier(identifier.toString());
         jdbcTemplate.update(NodeQuery.UPDATE_NODE_IDENTIFIER, params);
     }
 
-    private void addParams(Map<String, String> params, int node_id) {
+    private void addParams(Map<String, String> params, Integer node_id) {
         for (Map.Entry<String, String> pair : params.entrySet()) {
             jdbcTemplate.update(NodeQuery.ADD_PARAMS, node_id, pair.getKey(), pair.getValue());
         }
     }
 
-    private void updateParams(Map<String, String> newParams, int node_id) {
+    private void updateParams(Map<String, String> newParams, Integer node_id) {
         for (Map.Entry<String, String> pair : newParams.entrySet()) {
             jdbcTemplate.update(NodeQuery.UPDATE_PARAMS, pair.getKey(), pair.getValue(), node_id, pair.getKey());
         }
     }
 
-    private void addHierarchy(int node_id, int parent_id, int root_id) {
+    private void addHierarchy(Integer node_id, Integer parent_id, Integer root_id) {
         jdbcTemplate.update(NodeQuery.ADD_HIERARCHY, node_id, parent_id, root_id);
     }
 
-    public void deleteNode(int node_id) {
-        deleteHierarchy(node_id);
-        jdbcTemplate.update(NodeQuery.DELETE_NODE, node_id);
-        jdbcTemplate.update(NodeQuery.DELETE_PARAMS, node_id);
-
-        //jdbcTemplate.update(NodeQuery.DELETE_HIERARCHY, node_id, node_id, node_id);
+    public void deleteNode(String nodeIdentifier) {
+        int nodeId = getIdByidentifier(nodeIdentifier);
+        deleteHierarchy(nodeId);
+        jdbcTemplate.update(NodeQuery.DELETE_NODE, nodeId);
+        jdbcTemplate.update(NodeQuery.DELETE_PARAMS, nodeId);
     }
 
-    private void deleteHierarchy(int node_id) {
+    private void deleteHierarchy(Integer node_id) {
         Integer parentId = jdbcTemplate.queryForObject(NodeQuery.SELECT_HIERARCHY_NODE_PARENT, Integer.class, node_id);
         Integer rootId = jdbcTemplate.queryForObject(NodeQuery.SELECT_HIERARCHY_NODE_ROOT, Integer.class, node_id);
 
@@ -111,7 +103,6 @@ public class NodeRepository {
 
         Integer parentId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, parentNodeIdentifier);
         Integer childId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, childNodeIdentifier);
-        //  int count =
         Node parent = getNodeById(getIdByidentifier(parentNodeIdentifier));
         validatorManager.validate(node, parent);
         Object[] params = new Object[]{node.getType(), node.getName(), node.getDescription(), childNodeIdentifier, childId};
@@ -123,7 +114,7 @@ public class NodeRepository {
         }
     }
 
-    public boolean updateRootNode(Node node) {
+    public void updateRootNode(Node node) {
         Object[] params =
                 new Object[]{node.getType(), node.getName(), node.getDescription(), node.getIdentifier()};
         jdbcTemplate.update(NodeQuery.UPDATE_ROOT, params);
@@ -131,7 +122,6 @@ public class NodeRepository {
             updateParams(node.getParams(), node.getIdDB());
         }
 
-        return false;
     }
 
     public Integer getIdByidentifier(String identifier) {
@@ -148,9 +138,9 @@ public class NodeRepository {
 
     }
 
-    public Node getParams(Node node) {
+     void getParams(Node node) {
         List<Map<String, Object>> map =
-                jdbcTemplate.queryForList("Select param_name,param_value from node_params where node_id = (?)", node.getIdDB());
+                jdbcTemplate.queryForList(NodeQuery.GET_PARAMS, node.getIdDB());
         Map<String, String> params = new HashMap<>();
         for (Map<String, Object> m : map) {
             for (Map.Entry<String, Object> pair : m.entrySet()) {
@@ -161,7 +151,6 @@ public class NodeRepository {
 
         node.setParams(params);
 
-        return node;
 
     }
 

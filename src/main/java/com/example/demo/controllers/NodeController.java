@@ -19,33 +19,30 @@ public class NodeController {
         this.nodeService = nodeService;
     }
 
-    //@RequestMapping(value = "/create", method = RequestMethod.POST)
     @PostMapping(path = "/create/{parentId}/{rootId}", consumes = "application/json")
-    public ResponseEntity<String> createNode(@RequestBody String jsonNode, @PathVariable int parentId, @PathVariable int rootId) {
+    public ResponseEntity<String> createNode(@RequestBody String jsonNode, @PathVariable String parentId, @PathVariable String rootId) {
         Node node = JsonParser.toJavaObject(jsonNode);
-        try{
-        nodeService.createNode(node, parentId, rootId);
-        }
-        catch (HierarchyException h){
+        try {
+            nodeService.createNode(node, parentId, rootId);
+        } catch (HierarchyException h) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(HttpStatus.OK);
 
     }
 
-    @RequestMapping(value = "/delete/{nodeId}", method = RequestMethod.POST)
-    public void deleteNode(@PathVariable int nodeId) {
+    @PostMapping(path = "/delete/{nodeId}")
+    public void deleteNode(@PathVariable String nodeId) {
         nodeService.deleteNode(nodeId);
     }
 
-    @RequestMapping(value = "/update/{parentNodeIdentifier}/{childNodeIdentifier}", method = RequestMethod.POST)
+    @PostMapping(path = "/update/{parentNodeIdentifier}/{childNodeIdentifier}")
     public ResponseEntity<String> update(@PathVariable String parentNodeIdentifier, @PathVariable String childNodeIdentifier,
-                       @RequestBody String jsonNode) {
+                                         @RequestBody String jsonNode) {
         Node node = JsonParser.toJavaObject(jsonNode);
-        try{
-        nodeService.updateNodeChild(parentNodeIdentifier, childNodeIdentifier, node);
-        }
-        catch (HierarchyException h){
+        try {
+            nodeService.updateNodeChild(parentNodeIdentifier, childNodeIdentifier, node);
+        } catch (HierarchyException h) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(HttpStatus.OK);
