@@ -14,7 +14,7 @@ public class NodeMapper  implements RowMapper<Node> {
         node.setType(resultSet.getString(NodeQuery.TYPE));
         node.setName(resultSet.getString(NodeQuery.NAME));
         node.setDescription(resultSet.getString(NodeQuery.DESCRIPTIOPN));
-        node.setIdentifier(resultSet.getString(NodeQuery.IDENTIFIER));
+        node.setId(resultSet.getString(NodeQuery.IDENTIFIER));
 
         return node;
     }

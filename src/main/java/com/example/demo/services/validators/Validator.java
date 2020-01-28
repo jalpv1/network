@@ -5,7 +5,13 @@ import com.example.demo.services.exeption.HierarchyException;
 
 public interface Validator  {
     default  boolean  typeValid (Node node) {
-        return !node.getType().trim().isEmpty();
+
+                return !node.getType().trim().isEmpty() &&
+                        (node.getType().equalsIgnoreCase("Resource")
+                        || (node.getType().equalsIgnoreCase("NetWork")
+                        || node.getType().equalsIgnoreCase("TRANSFORMER")
+                        || node.getType().equalsIgnoreCase("SUBSTATION")
+                        || node.getType().equalsIgnoreCase("FEEDER")));
     }
 
     default boolean hierarchyCheck(Node parentNode)  {

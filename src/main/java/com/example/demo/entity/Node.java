@@ -16,7 +16,7 @@ public class Node {
 
 
     @JsonProperty("id")
-    private String identifier;
+    private String id;
     @JsonProperty("type")
     private String type;
     @JsonProperty("name")
@@ -36,29 +36,18 @@ public class Node {
         this.children = children;
     }
 
-    public String getIdentifier() {
-        return identifier;
+    public String getId() {
+        return id;
     }
 
-    public void setIdentifier(String identifier) {
-        this.identifier = identifier;
+    public void setId(String id) {
+        this.id = id;
     }
-
 
     public Node() {
         params = new HashMap<>();
         children = new ArrayList<>();
     }
-
-    /*public int getidDB() {
-        return idDB;
-    }
-
-    public void setidDB(int id) {
-        this.idDB = id;
-    }
-
-     */
 
     public String getType() {
         return type;

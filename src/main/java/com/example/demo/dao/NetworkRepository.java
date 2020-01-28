@@ -3,6 +3,7 @@ package com.example.demo.dao;
 import com.example.demo.dao.mappers.NodeMapper;
 import com.example.demo.dao.query.NodeQuery;
 import com.example.demo.entity.Node;
+import com.example.demo.services.exeption.IdNotFoundException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,9 +23,9 @@ public class NetworkRepository {
         this.nodeRepository = nodeRepository;
     }
 
-    public void deleteNetwork(String rootIdentifier) {
-        Integer rootId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, rootIdentifier);
-        List<Node> networkNodes = jdbcTemplate.query(NodeQuery.SELECT_HIERARCHY_NETWORK_BY_ROOT, new Object[]{rootId}, new NodeMapper());
+    public void deleteNetwork(String rootIdentifier) throws IdNotFoundException {
+        Integer rootId = nodeRepository.getIdDBById(rootIdentifier);
+                List<Node> networkNodes = jdbcTemplate.query(NodeQuery.SELECT_HIERARCHY_NETWORK_BY_ROOT, new Object[]{rootId}, new NodeMapper());
         for (Node node : networkNodes) {
             jdbcTemplate.update(NodeQuery.DELETE_NODE, node.getIdDB());
 

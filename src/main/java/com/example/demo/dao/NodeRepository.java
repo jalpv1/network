@@ -4,6 +4,7 @@ import com.example.demo.dao.mappers.NodeMapper;
 import com.example.demo.dao.query.NodeQuery;
 import com.example.demo.entity.Node;
 import com.example.demo.services.exeption.HierarchyException;
+import com.example.demo.services.exeption.IdNotFoundException;
 import com.example.demo.services.validators.ValidatorManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -57,7 +58,7 @@ public class NodeRepository {
     private void createIdentifier(Integer id, Node node) {
         StringBuilder identifier = new StringBuilder(node.getType() + id);
         Object[] params = new Object[]{identifier, id};
-        node.setIdentifier(identifier.toString());
+        node.setId(identifier.toString());
         jdbcTemplate.update(NodeQuery.UPDATE_NODE_IDENTIFIER, params);
     }
 
@@ -77,8 +78,8 @@ public class NodeRepository {
         jdbcTemplate.update(NodeQuery.ADD_HIERARCHY, node_id, parent_id, root_id);
     }
 
-    public void deleteNode(String nodeIdentifier) {
-        int nodeId = getIdByidentifier(nodeIdentifier);
+    public void deleteNode(String nodeIdentifier) throws IdNotFoundException{
+        int nodeId = getIdDBById(nodeIdentifier);
         deleteHierarchy(nodeId);
         jdbcTemplate.update(NodeQuery.DELETE_NODE, nodeId);
         jdbcTemplate.update(NodeQuery.DELETE_PARAMS, nodeId);
@@ -99,11 +100,11 @@ public class NodeRepository {
     }
 
     public void updateChild(String parentNodeIdentifier, String childNodeIdentifier,
-                            Node node) throws HierarchyException {
+                            Node node) throws HierarchyException ,IdNotFoundException{
 
-        Integer parentId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, parentNodeIdentifier);
-        Integer childId = jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, childNodeIdentifier);
-        Node parent = getNodeById(getIdByidentifier(parentNodeIdentifier));
+        Integer parentId = getIdDBById(parentNodeIdentifier);
+        Integer childId = getIdDBById(childNodeIdentifier);
+        Node parent = getNodeById(getIdDBById(parentNodeIdentifier));
         validatorManager.validate(node, parent);
         Object[] params = new Object[]{node.getType(), node.getName(), node.getDescription(), childNodeIdentifier, childId};
         if (Objects.requireNonNull(jdbcTemplate.queryForObject(NodeQuery.CHECK_HIERARCHY, Integer.class, parentId, childId)).equals(1)) {
@@ -116,7 +117,7 @@ public class NodeRepository {
 
     public void updateRootNode(Node node) {
         Object[] params =
-                new Object[]{node.getType(), node.getName(), node.getDescription(), node.getIdentifier()};
+                new Object[]{node.getType(), node.getName(), node.getDescription(), node.getId()};
         jdbcTemplate.update(NodeQuery.UPDATE_ROOT, params);
         if (!node.getParams().isEmpty()) {
             updateParams(node.getParams(), node.getIdDB());
@@ -124,8 +125,13 @@ public class NodeRepository {
 
     }
 
-    public Integer getIdByidentifier(String identifier) {
-        return jdbcTemplate.queryForObject(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, identifier);
+    public Integer getIdDBById(String identifier) throws IdNotFoundException{
+        List <Integer> integers =
+                jdbcTemplate.queryForList(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, identifier);
+        if(integers.isEmpty()){
+            throw new IdNotFoundException();
+        }
+        return jdbcTemplate.queryForList(NodeQuery.GET_ID_BY_IDENTIFIER, Integer.class, identifier).get(0);
 
     }
 

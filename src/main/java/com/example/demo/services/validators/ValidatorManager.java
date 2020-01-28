@@ -21,18 +21,28 @@ public class ValidatorManager {
     private   boolean  childValid (Node node) {
         return node.getType().equalsIgnoreCase("Network");
     }
-    public boolean validate(Node node,Node parentNode) throws HierarchyException {
+    //private N
+    //private final static VALID_TYPES = [firstenum, secondendu thindenum]
+    private   boolean  typeValid (Node node) {
+
+     //   return node != null && VALID_TYPES.find(node)
+
+        return !node.getType().trim().isEmpty() &&
+                (node.getType().equalsIgnoreCase("Resource")
+                        || (node.getType().equalsIgnoreCase("NetWork")
+                        || node.getType().equalsIgnoreCase("TRANSFORMER")
+                        || node.getType().equalsIgnoreCase("SUBSTATION")
+                        || node.getType().equalsIgnoreCase("FEEDER")));
+    }
+    public void validate(Node node,Node parentNode) throws HierarchyException {
         String type = node.getType().toUpperCase();
-        //        //validateMap.get(node.getType().toUpperCase()).typeValid(node) &&
-        //        //validateMap.get(node.getType().toUpperCase()).typeValid(node)
-        //        //               ||childValid(node)
-        //        //
-        //        //               ||
-        Validator v  = validateMap.get(type);
-        boolean validation = v.hierarchyCheck(parentNode);
-       if( !validation ||childValid(node)){
-           throw new  HierarchyException ();
-       }
-       return true;
+        if(typeValid(node)) {
+            Validator v = validateMap.get(type);
+            boolean validation = validateMap.get(type).hierarchyCheck(parentNode);
+            if (!validation || childValid(node)) {
+                throw new HierarchyException();
+            }
+        }
+        else {  throw new HierarchyException();}
     }
 }
