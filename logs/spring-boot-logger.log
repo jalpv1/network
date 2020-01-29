@@ -1,53 +1,562 @@
-2020-01-28 21:48:23,277 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplicationTests on DESKTOP-IFQK0U3 with PID 15440 (started by julia in E:\Documents\luxoftTaskNetwork)
-2020-01-28 21:48:23,283 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2020-01-28 21:48:23,287 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2020-01-28 21:48:26,649 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-28 21:48:28,531 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-01-28 21:48:29,338 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2020-01-28 21:48:29,929 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-01-28 21:48:30,015 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
-2020-01-28 21:48:30,108 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-01-28 21:48:30,707 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplicationTests in 8.644 seconds (JVM running for 11.435)
-2020-01-28 21:48:32,093 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
-2020-01-28 21:48:49,484 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 20244 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
-2020-01-28 21:48:49,491 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2020-01-28 21:48:49,494 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2020-01-28 21:48:51,171 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-01-28 21:48:52,008 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2020-01-28 21:48:52,036 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
-2020-01-28 21:48:52,040 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2020-01-28 21:48:52,045 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.30]
-2020-01-28 21:48:52,228 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2020-01-28 21:48:52,231 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2644 ms
-2020-01-28 21:48:52,797 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-01-28 21:48:52,979 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2020-01-28 21:48:53,153 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-01-28 21:48:53,179 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
-2020-01-28 21:48:53,252 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-01-28 21:48:53,550 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
-2020-01-28 21:48:53,658 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2020-01-28 21:48:53,671 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 5.211 seconds (JVM running for 5.937)
-2020-01-28 21:50:24,491 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-01-28 21:50:24,518 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
-2020-01-28 21:50:24,678 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 156 ms
-2020-01-28 21:50:24,981 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-2] Info level log message
-2020-01-28 21:50:24,987 DEBUG com.example.demo.controllers.NetworkController [http-nio-8080-exec-2] Debug level log message
-2020-01-28 21:50:24,990 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-2] Error level log message
-2020-01-28 21:52:05,551 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
-2020-01-28 21:52:54,290 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplicationTests on DESKTOP-IFQK0U3 with PID 23136 (started by julia in E:\Documents\luxoftTaskNetwork)
-2020-01-28 21:52:54,298 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2020-01-28 21:52:54,300 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2020-01-28 21:53:02,188 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplicationTests in 9.169 seconds (JVM running for 12.543)
-2020-01-28 21:53:23,109 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 20084 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
-2020-01-28 21:53:23,114 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
-2020-01-28 21:53:23,117 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2020-01-28 21:53:26,462 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.294 seconds (JVM running for 4.952)
-2020-01-28 21:53:35,767 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-1] Info level log message
-2020-01-28 21:53:35,781 DEBUG com.example.demo.controllers.NetworkController [http-nio-8080-exec-1] Debug level log message
-2020-01-28 21:53:35,789 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-1] Error level log message
-2020-01-28 21:54:07,127 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-3] Info level log message
-2020-01-28 21:54:07,136 DEBUG com.example.demo.controllers.NetworkController [http-nio-8080-exec-3] Debug level log message
-2020-01-28 21:54:07,142 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-3] Error level log message
-2020-01-28 21:55:24,772 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-6] Info level log message
-2020-01-28 21:55:24,901 DEBUG com.example.demo.controllers.NetworkController [http-nio-8080-exec-6] Debug level log message
-2020-01-28 21:55:24,906 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-6] Error level log message
+2020-01-29 09:01:22,720 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 8672 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 09:01:22,731 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 09:01:22,742 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 09:01:29,002 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 8.44 seconds (JVM running for 12.426)
+2020-01-29 09:53:41,277 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 22640 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 09:53:41,283 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 09:53:41,286 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 09:53:47,582 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 7.875 seconds (JVM running for 11.0)
+2020-01-29 09:56:55,940 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 8820 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 09:56:55,948 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 09:56:55,949 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 09:57:00,751 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 6.781 seconds (JVM running for 10.569)
+2020-01-29 10:01:47,041 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 15040 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 10:01:47,046 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 10:01:47,047 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 10:01:50,246 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.998 seconds (JVM running for 7.847)
+2020-01-29 10:14:41,627 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 22720 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 10:14:41,630 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 10:14:41,632 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 10:14:44,674 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.532 seconds (JVM running for 6.778)
+2020-01-29 10:15:51,982 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 16764 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 10:15:51,987 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 10:15:51,988 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 10:15:55,329 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 5.058 seconds (JVM running for 7.324)
+2020-01-29 10:17:21,082 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 16364 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 10:17:21,098 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 10:17:21,101 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 10:17:24,810 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 5.837 seconds (JVM running for 9.696)
+2020-01-29 10:44:09,609 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplicationTests on DESKTOP-IFQK0U3 with PID 19816 (started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 10:44:09,614 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 10:44:09,619 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 10:44:17,624 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplicationTests in 10.613 seconds (JVM running for 13.7)
+2020-01-29 10:44:43,034 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 20812 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 10:44:43,038 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 10:44:43,039 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 10:44:46,057 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.527 seconds (JVM running for 6.679)
+2020-01-29 10:47:43,156 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 22896 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 10:47:43,172 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 10:47:43,174 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 10:48:22,711 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplicationTests on DESKTOP-IFQK0U3 with PID 17176 (started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 10:48:22,716 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 10:48:22,720 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 10:48:29,693 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplicationTests in 8.492 seconds (JVM running for 10.904)
+2020-01-29 10:49:55,835 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 19508 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 10:49:55,840 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 10:49:55,843 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 10:50:13,022 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 6204 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 10:50:13,036 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 10:50:13,038 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 10:50:16,149 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.518 seconds (JVM running for 6.81)
+2020-01-29 10:51:11,423 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-1] Info level log message
+2020-01-29 10:51:11,424 DEBUG com.example.demo.controllers.NetworkController [http-nio-8080-exec-1] Debug level log message
+2020-01-29 10:51:11,424 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-1] Error level log message
+2020-01-29 11:55:44,829 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplicationTests on DESKTOP-IFQK0U3 with PID 14920 (started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 11:55:44,836 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 11:55:44,839 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 11:55:51,545 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplicationTests in 7.956 seconds (JVM running for 10.779)
+2020-01-29 11:56:15,165 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 16148 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 11:56:15,169 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 11:56:15,171 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 11:56:18,387 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.64 seconds (JVM running for 6.736)
+2020-01-29 11:57:02,459 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-2] create network controller 
+2020-01-29 11:57:03,140 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] create network with id sbst-1
+2020-01-29 11:57:03,141 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] create root with id sbst-1
+2020-01-29 11:57:03,150 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create root node method. 
+2020-01-29 11:57:03,151 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check root node 
+2020-01-29 11:57:03,152 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 11:57:03,232 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create id of the node method. Id in database 302
+2020-01-29 11:57:03,244 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  id created successfully. Id isnetwork302
+2020-01-29 11:57:03,304 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create Hierarchy  method. parent Id in database 0 root Id in database 302 child Id in database 302
+2020-01-29 11:57:03,324 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Hierarchy created successfully 
+2020-01-29 11:57:03,325 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create extra params  method. Id in database 302
+2020-01-29 11:57:03,338 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] extra params  created successfully 
+2020-01-29 11:57:03,339 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is network302
+2020-01-29 11:57:03,350 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get id of the parent
+2020-01-29 11:57:03,353 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] init Queue  with root's children 
+2020-01-29 11:57:03,354 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 11:57:03,366 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create node method. Parent id in dataBase: 302Parent id in dataBase: 302
+2020-01-29 11:57:03,368 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 302
+2020-01-29 11:57:03,372 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 11:57:03,375 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is TRANSFORMER
+2020-01-29 11:57:03,384 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create id of the node method. Id in database 303
+2020-01-29 11:57:03,386 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  id created successfully. Id isTRANSFORMER303
+2020-01-29 11:57:03,387 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create Hierarchy  method. parent Id in database 302 root Id in database 302 child Id in database 303
+2020-01-29 11:57:03,389 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Hierarchy created successfully 
+2020-01-29 11:57:03,391 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] created first element of the Queue.
+2020-01-29 11:57:03,392 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get children of first element of the Queue.
+2020-01-29 11:57:03,392 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is TRANSFORMER303
+2020-01-29 11:57:03,396 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get id of the parent
+2020-01-29 11:57:03,397 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 11:57:03,398 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create node method. Parent id in dataBase: 303Parent id in dataBase: 302
+2020-01-29 11:57:03,400 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 303
+2020-01-29 11:57:03,403 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 11:57:03,405 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is FEEDER
+2020-01-29 11:57:03,408 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create id of the node method. Id in database 304
+2020-01-29 11:57:03,411 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  id created successfully. Id isFEEDER304
+2020-01-29 11:57:03,413 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create Hierarchy  method. parent Id in database 303 root Id in database 302 child Id in database 304
+2020-01-29 11:57:03,415 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Hierarchy created successfully 
+2020-01-29 11:57:03,416 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] created first element of the Queue.
+2020-01-29 11:57:03,417 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get children of first element of the Queue.
+2020-01-29 11:57:03,419 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER304
+2020-01-29 11:57:03,422 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get id of the parent
+2020-01-29 11:57:03,422 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 11:57:03,423 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create node method. Parent id in dataBase: 303Parent id in dataBase: 302
+2020-01-29 11:57:03,424 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 303
+2020-01-29 11:57:03,426 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 11:57:03,427 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is FEEDER
+2020-01-29 11:57:03,432 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create id of the node method. Id in database 305
+2020-01-29 11:57:03,435 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  id created successfully. Id isFEEDER305
+2020-01-29 11:57:03,436 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create Hierarchy  method. parent Id in database 303 root Id in database 302 child Id in database 305
+2020-01-29 11:57:03,438 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Hierarchy created successfully 
+2020-01-29 11:57:03,439 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] created first element of the Queue.
+2020-01-29 11:57:03,439 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get children of first element of the Queue.
+2020-01-29 11:57:03,440 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER305
+2020-01-29 11:57:03,442 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get id of the parent
+2020-01-29 11:57:03,445 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 11:57:03,446 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create node method. Parent id in dataBase: 304Parent id in dataBase: 302
+2020-01-29 11:57:03,448 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 304
+2020-01-29 11:57:03,450 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 11:57:03,451 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is RESOURCE
+2020-01-29 11:57:03,455 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create id of the node method. Id in database 306
+2020-01-29 11:57:03,457 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  id created successfully. Id isRESOURCE306
+2020-01-29 11:57:03,457 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create extra params  method. Id in database 306
+2020-01-29 11:57:03,459 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] extra params  created successfully 
+2020-01-29 11:57:03,461 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create Hierarchy  method. parent Id in database 304 root Id in database 302 child Id in database 306
+2020-01-29 11:57:03,464 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Hierarchy created successfully 
+2020-01-29 11:57:03,465 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] created first element of the Queue.
+2020-01-29 11:57:03,466 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 11:57:03,467 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create node method. Parent id in dataBase: 304Parent id in dataBase: 302
+2020-01-29 11:57:03,468 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 304
+2020-01-29 11:57:03,469 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 11:57:03,470 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is RESOURCE
+2020-01-29 11:57:03,471 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create id of the node method. Id in database 307
+2020-01-29 11:57:03,472 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  id created successfully. Id isRESOURCE307
+2020-01-29 11:57:03,473 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create Hierarchy  method. parent Id in database 304 root Id in database 302 child Id in database 307
+2020-01-29 11:57:03,474 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Hierarchy created successfully 
+2020-01-29 11:57:03,474 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] created first element of the Queue.
+2020-01-29 11:57:03,475 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 11:57:03,475 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create node method. Parent id in dataBase: 305Parent id in dataBase: 302
+2020-01-29 11:57:03,476 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 305
+2020-01-29 11:57:03,477 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 11:57:03,478 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is RESOURCE
+2020-01-29 11:57:03,481 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create id of the node method. Id in database 308
+2020-01-29 11:57:03,482 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  id created successfully. Id isRESOURCE308
+2020-01-29 11:57:03,483 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create extra params  method. Id in database 308
+2020-01-29 11:57:03,485 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] extra params  created successfully 
+2020-01-29 11:57:03,485 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create Hierarchy  method. parent Id in database 305 root Id in database 302 child Id in database 308
+2020-01-29 11:57:03,486 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Hierarchy created successfully 
+2020-01-29 11:57:03,487 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] created first element of the Queue.
+2020-01-29 11:58:35,416 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-5] create network controller 
+2020-01-29 11:58:35,618 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-5] create network with id sbst-1
+2020-01-29 11:58:35,619 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-5] create root with id sbst-1
+2020-01-29 11:58:35,621 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create root node method. 
+2020-01-29 11:58:35,622 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] Check root node 
+2020-01-29 11:58:35,623 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] check that type is valid 
+2020-01-29 11:58:35,624 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] type is not valid ,throw HierarchyException 
+2020-01-29 11:58:35,629 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-5] Wrong data. Hierarchy is not valid or Id does not exist in database 
+2020-01-29 11:58:51,933 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-6] create network controller 
+2020-01-29 11:58:52,098 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-6] create network with id sbst-1
+2020-01-29 11:58:52,100 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-6] create root with id sbst-1
+2020-01-29 11:58:52,101 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create root node method. 
+2020-01-29 11:58:52,102 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] Check root node 
+2020-01-29 11:58:52,103 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] check that type is valid 
+2020-01-29 11:58:52,156 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create id of the node method. Id in database 309
+2020-01-29 11:58:52,165 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  id created successfully. Id isnetwork309
+2020-01-29 11:58:52,166 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create Hierarchy  method. parent Id in database 0 root Id in database 309 child Id in database 309
+2020-01-29 11:58:52,171 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Hierarchy created successfully 
+2020-01-29 11:58:52,172 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create extra params  method. Id in database 309
+2020-01-29 11:58:52,181 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] extra params  created successfully 
+2020-01-29 11:58:52,182 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  get node's id in db by id .Id is network309
+2020-01-29 11:58:52,192 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-6] get id of the parent
+2020-01-29 11:58:52,195 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-6] init Queue  with root's children 
+2020-01-29 11:58:52,196 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-6] get first element of the Queue.
+2020-01-29 11:58:52,197 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create node method. Parent id in dataBase: 309Parent id in dataBase: 309
+2020-01-29 11:58:52,198 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  get node by id .Id is 309
+2020-01-29 11:58:52,200 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] check that type is valid 
+2020-01-29 11:58:52,201 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] Check hierarchy. Node's type is network
+2020-01-29 11:58:52,204 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] hierarchy is not valid,throw HierarchyException 
+2020-01-29 11:58:52,215 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-6] Wrong data. Hierarchy is not valid or Id does not exist in database 
+2020-01-29 11:59:48,034 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-8] create network controller 
+2020-01-29 11:59:48,220 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] create network with id sbst-1
+2020-01-29 11:59:48,221 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] create root with id sbst-1
+2020-01-29 11:59:48,222 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create root node method. 
+2020-01-29 11:59:48,222 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] Check root node 
+2020-01-29 11:59:48,223 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] check that type is valid 
+2020-01-29 11:59:48,278 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create id of the node method. Id in database 310
+2020-01-29 11:59:48,285 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  id created successfully. Id isnetwork310
+2020-01-29 11:59:48,286 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create Hierarchy  method. parent Id in database 0 root Id in database 310 child Id in database 310
+2020-01-29 11:59:48,294 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Hierarchy created successfully 
+2020-01-29 11:59:48,295 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create extra params  method. Id in database 310
+2020-01-29 11:59:48,308 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] extra params  created successfully 
+2020-01-29 11:59:48,310 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node's id in db by id .Id is network310
+2020-01-29 11:59:48,321 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get id of the parent
+2020-01-29 11:59:48,323 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] init Queue  with root's children 
+2020-01-29 11:59:48,324 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get first element of the Queue.
+2020-01-29 11:59:48,325 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create node method. Parent id in dataBase: 310Parent id in dataBase: 310
+2020-01-29 11:59:48,325 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node by id .Id is 310
+2020-01-29 11:59:48,327 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] check that type is valid 
+2020-01-29 11:59:48,328 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] Check hierarchy. Node's type is TRANSFORMER
+2020-01-29 11:59:48,330 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create id of the node method. Id in database 311
+2020-01-29 11:59:48,332 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  id created successfully. Id isTRANSFORMER311
+2020-01-29 11:59:48,332 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create Hierarchy  method. parent Id in database 310 root Id in database 310 child Id in database 311
+2020-01-29 11:59:48,334 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Hierarchy created successfully 
+2020-01-29 11:59:48,335 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] created first element of the Queue.
+2020-01-29 11:59:48,336 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get children of first element of the Queue.
+2020-01-29 11:59:48,337 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node's id in db by id .Id is TRANSFORMER311
+2020-01-29 11:59:48,340 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get id of the parent
+2020-01-29 11:59:48,341 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get first element of the Queue.
+2020-01-29 11:59:48,342 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create node method. Parent id in dataBase: 311Parent id in dataBase: 310
+2020-01-29 11:59:48,342 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node by id .Id is 311
+2020-01-29 11:59:48,344 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] check that type is valid 
+2020-01-29 11:59:48,345 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] Check hierarchy. Node's type is FEEDER
+2020-01-29 11:59:48,348 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create id of the node method. Id in database 312
+2020-01-29 11:59:48,350 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  id created successfully. Id isFEEDER312
+2020-01-29 11:59:48,350 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create Hierarchy  method. parent Id in database 311 root Id in database 310 child Id in database 312
+2020-01-29 11:59:48,352 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Hierarchy created successfully 
+2020-01-29 11:59:48,353 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] created first element of the Queue.
+2020-01-29 11:59:48,354 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get children of first element of the Queue.
+2020-01-29 11:59:48,354 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node's id in db by id .Id is FEEDER312
+2020-01-29 11:59:48,357 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get id of the parent
+2020-01-29 11:59:48,358 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get first element of the Queue.
+2020-01-29 11:59:48,359 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create node method. Parent id in dataBase: 311Parent id in dataBase: 310
+2020-01-29 11:59:48,360 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node by id .Id is 311
+2020-01-29 11:59:48,363 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] check that type is valid 
+2020-01-29 11:59:48,364 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] Check hierarchy. Node's type is FEEDER
+2020-01-29 11:59:48,366 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create id of the node method. Id in database 313
+2020-01-29 11:59:48,368 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  id created successfully. Id isFEEDER313
+2020-01-29 11:59:48,369 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create Hierarchy  method. parent Id in database 311 root Id in database 310 child Id in database 313
+2020-01-29 11:59:48,370 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Hierarchy created successfully 
+2020-01-29 11:59:48,371 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] created first element of the Queue.
+2020-01-29 11:59:48,372 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get children of first element of the Queue.
+2020-01-29 11:59:48,373 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node's id in db by id .Id is FEEDER313
+2020-01-29 11:59:48,375 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get id of the parent
+2020-01-29 11:59:48,376 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get first element of the Queue.
+2020-01-29 11:59:48,377 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create node method. Parent id in dataBase: 312Parent id in dataBase: 310
+2020-01-29 11:59:48,378 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node by id .Id is 312
+2020-01-29 11:59:48,379 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] check that type is valid 
+2020-01-29 11:59:48,380 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] Check hierarchy. Node's type is RESOURCE
+2020-01-29 11:59:48,383 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create id of the node method. Id in database 314
+2020-01-29 11:59:48,384 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  id created successfully. Id isRESOURCE314
+2020-01-29 11:59:48,385 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create extra params  method. Id in database 314
+2020-01-29 11:59:48,389 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] extra params  created successfully 
+2020-01-29 11:59:48,391 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create Hierarchy  method. parent Id in database 312 root Id in database 310 child Id in database 314
+2020-01-29 11:59:48,393 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Hierarchy created successfully 
+2020-01-29 11:59:48,395 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] created first element of the Queue.
+2020-01-29 11:59:48,396 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get first element of the Queue.
+2020-01-29 11:59:48,396 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create node method. Parent id in dataBase: 312Parent id in dataBase: 310
+2020-01-29 11:59:48,397 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node by id .Id is 312
+2020-01-29 11:59:48,398 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] check that type is valid 
+2020-01-29 11:59:48,399 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] Check hierarchy. Node's type is RESOURCE
+2020-01-29 11:59:48,402 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create id of the node method. Id in database 315
+2020-01-29 11:59:48,403 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  id created successfully. Id isRESOURCE315
+2020-01-29 11:59:48,405 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create Hierarchy  method. parent Id in database 312 root Id in database 310 child Id in database 315
+2020-01-29 11:59:48,408 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Hierarchy created successfully 
+2020-01-29 11:59:48,408 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] created first element of the Queue.
+2020-01-29 11:59:48,409 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] get first element of the Queue.
+2020-01-29 11:59:48,410 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create node method. Parent id in dataBase: 313Parent id in dataBase: 310
+2020-01-29 11:59:48,411 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node by id .Id is 313
+2020-01-29 11:59:48,415 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] check that type is valid 
+2020-01-29 11:59:48,417 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] Check hierarchy. Node's type is RESOURCE
+2020-01-29 11:59:48,419 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create id of the node method. Id in database 316
+2020-01-29 11:59:48,421 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  id created successfully. Id isRESOURCE316
+2020-01-29 11:59:48,422 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create extra params  method. Id in database 316
+2020-01-29 11:59:48,427 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] extra params  created successfully 
+2020-01-29 11:59:48,428 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create Hierarchy  method. parent Id in database 313 root Id in database 310 child Id in database 316
+2020-01-29 11:59:48,429 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Hierarchy created successfully 
+2020-01-29 11:59:48,430 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] created first element of the Queue.
+2020-01-29 12:00:26,249 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-10] create network controller 
+2020-01-29 12:00:26,439 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] create network with id  
+2020-01-29 12:00:26,441 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] create root with id  
+2020-01-29 12:00:26,443 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create root node method. 
+2020-01-29 12:00:26,444 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] Check root node 
+2020-01-29 12:00:26,445 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] check that type is valid 
+2020-01-29 12:00:26,483 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create id of the node method. Id in database 317
+2020-01-29 12:00:26,490 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  id created successfully. Id isnetwork317
+2020-01-29 12:00:26,492 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create Hierarchy  method. parent Id in database 0 root Id in database 317 child Id in database 317
+2020-01-29 12:00:26,500 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Hierarchy created successfully 
+2020-01-29 12:00:26,501 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create extra params  method. Id in database 317
+2020-01-29 12:00:26,512 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] extra params  created successfully 
+2020-01-29 12:00:26,513 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node's id in db by id .Id is network317
+2020-01-29 12:00:26,524 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get id of the parent
+2020-01-29 12:00:26,525 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] init Queue  with root's children 
+2020-01-29 12:00:26,525 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get first element of the Queue.
+2020-01-29 12:00:26,527 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create node method. Parent id in dataBase: 317Parent id in dataBase: 317
+2020-01-29 12:00:26,528 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node by id .Id is 317
+2020-01-29 12:00:26,529 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] check that type is valid 
+2020-01-29 12:00:26,531 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] Check hierarchy. Node's type is TRANSFORMER
+2020-01-29 12:00:26,533 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create id of the node method. Id in database 318
+2020-01-29 12:00:26,538 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  id created successfully. Id isTRANSFORMER318
+2020-01-29 12:00:26,539 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create Hierarchy  method. parent Id in database 317 root Id in database 317 child Id in database 318
+2020-01-29 12:00:26,541 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Hierarchy created successfully 
+2020-01-29 12:00:26,543 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] created first element of the Queue.
+2020-01-29 12:00:26,544 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get children of first element of the Queue.
+2020-01-29 12:00:26,545 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node's id in db by id .Id is TRANSFORMER318
+2020-01-29 12:00:26,547 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get id of the parent
+2020-01-29 12:00:26,549 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get first element of the Queue.
+2020-01-29 12:00:26,550 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create node method. Parent id in dataBase: 318Parent id in dataBase: 317
+2020-01-29 12:00:26,551 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node by id .Id is 318
+2020-01-29 12:00:26,556 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] check that type is valid 
+2020-01-29 12:00:26,558 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] Check hierarchy. Node's type is FEEDER
+2020-01-29 12:00:26,561 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create id of the node method. Id in database 319
+2020-01-29 12:00:26,563 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  id created successfully. Id isFEEDER319
+2020-01-29 12:00:26,564 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create Hierarchy  method. parent Id in database 318 root Id in database 317 child Id in database 319
+2020-01-29 12:00:26,566 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Hierarchy created successfully 
+2020-01-29 12:00:26,567 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] created first element of the Queue.
+2020-01-29 12:00:26,569 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get children of first element of the Queue.
+2020-01-29 12:00:26,574 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node's id in db by id .Id is FEEDER319
+2020-01-29 12:00:26,578 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get id of the parent
+2020-01-29 12:00:26,579 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get first element of the Queue.
+2020-01-29 12:00:26,580 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create node method. Parent id in dataBase: 318Parent id in dataBase: 317
+2020-01-29 12:00:26,581 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node by id .Id is 318
+2020-01-29 12:00:26,583 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] check that type is valid 
+2020-01-29 12:00:26,584 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] Check hierarchy. Node's type is FEEDER
+2020-01-29 12:00:26,589 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create id of the node method. Id in database 320
+2020-01-29 12:00:26,593 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  id created successfully. Id isFEEDER320
+2020-01-29 12:00:26,594 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create Hierarchy  method. parent Id in database 318 root Id in database 317 child Id in database 320
+2020-01-29 12:00:26,596 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Hierarchy created successfully 
+2020-01-29 12:00:26,598 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] created first element of the Queue.
+2020-01-29 12:00:26,599 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get children of first element of the Queue.
+2020-01-29 12:00:26,600 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node's id in db by id .Id is FEEDER320
+2020-01-29 12:00:26,602 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get id of the parent
+2020-01-29 12:00:26,603 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get first element of the Queue.
+2020-01-29 12:00:26,606 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create node method. Parent id in dataBase: 319Parent id in dataBase: 317
+2020-01-29 12:00:26,609 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node by id .Id is 319
+2020-01-29 12:00:26,627 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] check that type is valid 
+2020-01-29 12:00:26,629 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] Check hierarchy. Node's type is RESOURCE
+2020-01-29 12:00:26,632 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create id of the node method. Id in database 321
+2020-01-29 12:00:26,634 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  id created successfully. Id isRESOURCE321
+2020-01-29 12:00:26,634 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create extra params  method. Id in database 321
+2020-01-29 12:00:26,636 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] extra params  created successfully 
+2020-01-29 12:00:26,638 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create Hierarchy  method. parent Id in database 319 root Id in database 317 child Id in database 321
+2020-01-29 12:00:26,643 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Hierarchy created successfully 
+2020-01-29 12:00:26,644 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] created first element of the Queue.
+2020-01-29 12:00:26,645 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get first element of the Queue.
+2020-01-29 12:00:26,648 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create node method. Parent id in dataBase: 319Parent id in dataBase: 317
+2020-01-29 12:00:26,649 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node by id .Id is 319
+2020-01-29 12:00:26,651 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] check that type is valid 
+2020-01-29 12:00:26,653 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] Check hierarchy. Node's type is RESOURCE
+2020-01-29 12:00:26,657 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create id of the node method. Id in database 322
+2020-01-29 12:00:26,659 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  id created successfully. Id isRESOURCE322
+2020-01-29 12:00:26,661 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create Hierarchy  method. parent Id in database 319 root Id in database 317 child Id in database 322
+2020-01-29 12:00:26,663 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Hierarchy created successfully 
+2020-01-29 12:00:26,664 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] created first element of the Queue.
+2020-01-29 12:00:26,665 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] get first element of the Queue.
+2020-01-29 12:00:26,666 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create node method. Parent id in dataBase: 320Parent id in dataBase: 317
+2020-01-29 12:00:26,667 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node by id .Id is 320
+2020-01-29 12:00:26,669 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] check that type is valid 
+2020-01-29 12:00:26,670 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] Check hierarchy. Node's type is RESOURCE
+2020-01-29 12:00:26,674 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create id of the node method. Id in database 323
+2020-01-29 12:00:26,677 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  id created successfully. Id isRESOURCE323
+2020-01-29 12:00:26,679 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create extra params  method. Id in database 323
+2020-01-29 12:00:26,680 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] extra params  created successfully 
+2020-01-29 12:00:26,681 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Create Hierarchy  method. parent Id in database 320 root Id in database 317 child Id in database 323
+2020-01-29 12:00:26,684 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] Hierarchy created successfully 
+2020-01-29 12:00:26,684 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] created first element of the Queue.
+2020-01-29 12:02:15,947 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-2] update network controller 
+2020-01-29 12:02:16,103 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] update network 
+2020-01-29 12:02:16,123 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] update root node  method. 
+2020-01-29 12:02:16,146 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] update extra params  method. Id in database 0
+2020-01-29 12:02:16,152 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] extra params updated successfully 
+2020-01-29 12:02:16,154 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  node  updated successfully 
+2020-01-29 12:02:16,156 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] update root node 
+2020-01-29 12:02:16,156 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is network317
+2020-01-29 12:02:16,159 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get id of the parent
+2020-01-29 12:02:16,160 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] init Queue  with root's children 
+2020-01-29 12:02:16,161 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 12:02:16,163 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 317
+2020-01-29 12:02:16,212 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] update node  method. parent Id  network317 child Id  TRANSFORMER318
+2020-01-29 12:02:16,213 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is network317
+2020-01-29 12:02:16,215 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is TRANSFORMER318
+2020-01-29 12:02:16,217 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is network317
+2020-01-29 12:02:16,223 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 317
+2020-01-29 12:02:16,225 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 12:02:16,226 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is TRANSFORMER
+2020-01-29 12:02:16,239 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  node  updated successfully 
+2020-01-29 12:02:16,241 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] updated first element of the Queue.
+2020-01-29 12:02:16,242 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get children of first element of the Queue.
+2020-01-29 12:02:16,244 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is TRANSFORMER318
+2020-01-29 12:02:16,246 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get id of the parent
+2020-01-29 12:02:16,246 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 12:02:16,247 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 318
+2020-01-29 12:02:16,248 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] update node  method. parent Id  TRANSFORMER318 child Id  FEEDER319
+2020-01-29 12:02:16,249 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is TRANSFORMER318
+2020-01-29 12:02:16,254 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER319
+2020-01-29 12:02:16,256 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is TRANSFORMER318
+2020-01-29 12:02:16,258 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 318
+2020-01-29 12:02:16,260 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 12:02:16,261 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is FEEDER
+2020-01-29 12:02:16,264 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  node  updated successfully 
+2020-01-29 12:02:16,264 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] updated first element of the Queue.
+2020-01-29 12:02:16,265 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get children of first element of the Queue.
+2020-01-29 12:02:16,267 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER319
+2020-01-29 12:02:16,271 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get id of the parent
+2020-01-29 12:02:16,272 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 12:02:16,275 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 318
+2020-01-29 12:02:16,277 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] update node  method. parent Id  TRANSFORMER318 child Id  FEEDER320
+2020-01-29 12:02:16,278 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is TRANSFORMER318
+2020-01-29 12:02:16,280 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER320
+2020-01-29 12:02:16,281 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is TRANSFORMER318
+2020-01-29 12:02:16,283 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 318
+2020-01-29 12:02:16,287 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 12:02:16,288 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is FEEDER
+2020-01-29 12:02:16,291 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  node  updated successfully 
+2020-01-29 12:02:16,292 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] updated first element of the Queue.
+2020-01-29 12:02:16,293 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get children of first element of the Queue.
+2020-01-29 12:02:16,294 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER320
+2020-01-29 12:02:16,296 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get id of the parent
+2020-01-29 12:02:16,298 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 12:02:16,299 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 319
+2020-01-29 12:02:16,305 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] update node  method. parent Id  FEEDER319 child Id  RESOURCE321
+2020-01-29 12:02:16,307 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER319
+2020-01-29 12:02:16,309 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is RESOURCE321
+2020-01-29 12:02:16,311 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER319
+2020-01-29 12:02:16,313 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 319
+2020-01-29 12:02:16,315 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 12:02:16,316 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is RESOURCE
+2020-01-29 12:02:16,325 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] update extra params  method. Id in database 321
+2020-01-29 12:02:16,328 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] extra params updated successfully 
+2020-01-29 12:02:16,329 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  node  updated successfully 
+2020-01-29 12:02:16,330 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] updated first element of the Queue.
+2020-01-29 12:02:16,331 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 12:02:16,332 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 319
+2020-01-29 12:02:16,334 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] update node  method. parent Id  FEEDER319 child Id  RESOURCE322
+2020-01-29 12:02:16,338 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER319
+2020-01-29 12:02:16,340 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is RESOURCE322
+2020-01-29 12:02:16,342 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER319
+2020-01-29 12:02:16,344 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 319
+2020-01-29 12:02:16,346 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 12:02:16,347 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is RESOURCE
+2020-01-29 12:02:16,348 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  node  updated successfully 
+2020-01-29 12:02:16,349 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] updated first element of the Queue.
+2020-01-29 12:02:16,349 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] get first element of the Queue.
+2020-01-29 12:02:16,350 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 320
+2020-01-29 12:02:16,352 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] update node  method. parent Id  FEEDER320 child Id  RESOURCE323
+2020-01-29 12:02:16,354 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER320
+2020-01-29 12:02:16,356 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is RESOURCE323
+2020-01-29 12:02:16,376 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is FEEDER320
+2020-01-29 12:02:16,377 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node by id .Id is 320
+2020-01-29 12:02:16,391 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 12:02:16,394 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check hierarchy. Node's type is RESOURCE
+2020-01-29 12:02:16,405 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] update extra params  method. Id in database 323
+2020-01-29 12:02:16,409 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] extra params updated successfully 
+2020-01-29 12:02:16,411 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  node  updated successfully 
+2020-01-29 12:02:16,412 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] updated first element of the Queue.
+2020-01-29 12:11:14,049 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-7] search in roots network controller. By Name K
+2020-01-29 12:11:14,062 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-7] search in roots method 
+2020-01-29 12:11:14,399 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-7] search successfully
+2020-01-29 12:11:35,838 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-6] search in roots network controller. By Name YYYYNET
+2020-01-29 12:11:35,840 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-6] search in roots method 
+2020-01-29 12:11:36,083 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] get extra params  method. Id in database 317
+2020-01-29 12:11:36,287 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-6] search successfully
+2020-01-29 12:11:57,740 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-9] search in roots network controller. By Name o
+2020-01-29 12:11:57,743 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-9] search in roots method 
+2020-01-29 12:11:57,921 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-9] search successfully
+2020-01-29 12:12:16,282 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-8] search in roots network controller. By Name Big-consumer
+2020-01-29 12:12:16,283 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] search in roots method 
+2020-01-29 12:12:16,477 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-8] search successfully
+2020-01-29 12:12:53,966 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-10] Deleting network with id network317
+2020-01-29 12:12:54,115 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] Delete network with id network317
+2020-01-29 12:12:54,122 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node's id in db by id .Id is network317
+2020-01-29 12:12:54,140 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-10] get nodes of network
+2020-01-29 12:12:54,150 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-10] delete nodes of network
+2020-01-29 12:12:54,152 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-10] delete nodes of network
+2020-01-29 12:12:54,156 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-10] delete nodes of network
+2020-01-29 12:12:54,158 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-10] delete nodes of network
+2020-01-29 12:12:54,160 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-10] delete nodes of network
+2020-01-29 12:12:54,162 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-10] delete nodes of network
+2020-01-29 12:12:54,162 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-10] delete nodes of network
+2020-01-29 12:12:54,164 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-10] network deleted 
+2020-01-29 12:13:06,930 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-1] create network controller 
+2020-01-29 12:13:07,068 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] create network with id  
+2020-01-29 12:13:07,069 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] create root with id  
+2020-01-29 12:13:07,071 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create root node method. 
+2020-01-29 12:13:07,072 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] Check root node 
+2020-01-29 12:13:07,073 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] check that type is valid 
+2020-01-29 12:13:07,106 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create id of the node method. Id in database 324
+2020-01-29 12:13:07,115 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  id created successfully. Id isnetwork324
+2020-01-29 12:13:07,117 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create Hierarchy  method. parent Id in database 0 root Id in database 324 child Id in database 324
+2020-01-29 12:13:07,122 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Hierarchy created successfully 
+2020-01-29 12:13:07,123 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create extra params  method. Id in database 324
+2020-01-29 12:13:07,134 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] extra params  created successfully 
+2020-01-29 12:13:07,136 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node's id in db by id .Id is network324
+2020-01-29 12:13:07,139 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get id of the parent
+2020-01-29 12:13:07,141 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] init Queue  with root's children 
+2020-01-29 12:13:07,144 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get first element of the Queue.
+2020-01-29 12:13:07,148 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create node method. Parent id in dataBase: 324Parent id in dataBase: 324
+2020-01-29 12:13:07,148 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node by id .Id is 324
+2020-01-29 12:13:07,150 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] check that type is valid 
+2020-01-29 12:13:07,152 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] Check hierarchy. Node's type is TRANSFORMER
+2020-01-29 12:13:07,166 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create id of the node method. Id in database 325
+2020-01-29 12:13:07,172 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  id created successfully. Id isTRANSFORMER325
+2020-01-29 12:13:07,172 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create Hierarchy  method. parent Id in database 324 root Id in database 324 child Id in database 325
+2020-01-29 12:13:07,175 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Hierarchy created successfully 
+2020-01-29 12:13:07,178 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] created first element of the Queue.
+2020-01-29 12:13:07,182 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get children of first element of the Queue.
+2020-01-29 12:13:07,183 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node's id in db by id .Id is TRANSFORMER325
+2020-01-29 12:13:07,187 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get id of the parent
+2020-01-29 12:13:07,188 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get first element of the Queue.
+2020-01-29 12:13:07,190 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create node method. Parent id in dataBase: 325Parent id in dataBase: 324
+2020-01-29 12:13:07,195 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node by id .Id is 325
+2020-01-29 12:13:07,197 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] check that type is valid 
+2020-01-29 12:13:07,198 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] Check hierarchy. Node's type is FEEDER
+2020-01-29 12:13:07,201 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create id of the node method. Id in database 326
+2020-01-29 12:13:07,204 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  id created successfully. Id isFEEDER326
+2020-01-29 12:13:07,205 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create Hierarchy  method. parent Id in database 325 root Id in database 324 child Id in database 326
+2020-01-29 12:13:07,209 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Hierarchy created successfully 
+2020-01-29 12:13:07,212 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] created first element of the Queue.
+2020-01-29 12:13:07,213 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get children of first element of the Queue.
+2020-01-29 12:13:07,214 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node's id in db by id .Id is FEEDER326
+2020-01-29 12:13:07,216 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get id of the parent
+2020-01-29 12:13:07,217 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get first element of the Queue.
+2020-01-29 12:13:07,220 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create node method. Parent id in dataBase: 325Parent id in dataBase: 324
+2020-01-29 12:13:07,224 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node by id .Id is 325
+2020-01-29 12:13:07,230 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] check that type is valid 
+2020-01-29 12:13:07,231 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] Check hierarchy. Node's type is FEEDER
+2020-01-29 12:13:07,233 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create id of the node method. Id in database 327
+2020-01-29 12:13:07,235 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  id created successfully. Id isFEEDER327
+2020-01-29 12:13:07,236 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create Hierarchy  method. parent Id in database 325 root Id in database 324 child Id in database 327
+2020-01-29 12:13:07,238 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Hierarchy created successfully 
+2020-01-29 12:13:07,239 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] created first element of the Queue.
+2020-01-29 12:13:07,240 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get children of first element of the Queue.
+2020-01-29 12:13:07,245 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node's id in db by id .Id is FEEDER327
+2020-01-29 12:13:07,248 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get id of the parent
+2020-01-29 12:13:07,249 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get first element of the Queue.
+2020-01-29 12:13:07,251 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create node method. Parent id in dataBase: 326Parent id in dataBase: 324
+2020-01-29 12:13:07,251 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node by id .Id is 326
+2020-01-29 12:13:07,254 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] check that type is valid 
+2020-01-29 12:13:07,255 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] Check hierarchy. Node's type is RESOURCE
+2020-01-29 12:13:07,262 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create id of the node method. Id in database 328
+2020-01-29 12:13:07,264 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  id created successfully. Id isRESOURCE328
+2020-01-29 12:13:07,266 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create extra params  method. Id in database 328
+2020-01-29 12:13:07,271 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] extra params  created successfully 
+2020-01-29 12:13:07,272 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create Hierarchy  method. parent Id in database 326 root Id in database 324 child Id in database 328
+2020-01-29 12:13:07,277 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Hierarchy created successfully 
+2020-01-29 12:13:07,279 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] created first element of the Queue.
+2020-01-29 12:13:07,280 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get first element of the Queue.
+2020-01-29 12:13:07,281 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create node method. Parent id in dataBase: 326Parent id in dataBase: 324
+2020-01-29 12:13:07,282 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node by id .Id is 326
+2020-01-29 12:13:07,284 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] check that type is valid 
+2020-01-29 12:13:07,285 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] Check hierarchy. Node's type is RESOURCE
+2020-01-29 12:13:07,290 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create id of the node method. Id in database 329
+2020-01-29 12:13:07,296 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  id created successfully. Id isRESOURCE329
+2020-01-29 12:13:07,297 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create Hierarchy  method. parent Id in database 326 root Id in database 324 child Id in database 329
+2020-01-29 12:13:07,300 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Hierarchy created successfully 
+2020-01-29 12:13:07,301 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] created first element of the Queue.
+2020-01-29 12:13:07,303 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] get first element of the Queue.
+2020-01-29 12:13:07,306 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create node method. Parent id in dataBase: 327Parent id in dataBase: 324
+2020-01-29 12:13:07,310 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node by id .Id is 327
+2020-01-29 12:13:07,312 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] check that type is valid 
+2020-01-29 12:13:07,313 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] Check hierarchy. Node's type is RESOURCE
+2020-01-29 12:13:07,316 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create id of the node method. Id in database 330
+2020-01-29 12:13:07,318 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  id created successfully. Id isRESOURCE330
+2020-01-29 12:13:07,319 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create extra params  method. Id in database 330
+2020-01-29 12:13:07,322 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] extra params  created successfully 
+2020-01-29 12:13:07,323 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Create Hierarchy  method. parent Id in database 327 root Id in database 324 child Id in database 330
+2020-01-29 12:13:07,325 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] Hierarchy created successfully 
+2020-01-29 12:13:07,327 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] created first element of the Queue.
+2020-01-29 12:14:09,992 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-2] search in  network controller. By Name Big-consumer Root id network324
+2020-01-29 12:14:09,995 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] search in network method 
+2020-01-29 12:14:09,995 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is network324
+2020-01-29 12:14:10,475 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] get extra params  method. Id in database 328
+2020-01-29 12:14:10,731 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-2] search successfully

@@ -38,6 +38,7 @@ public class NetworkController {
 
         }
         catch (IdNotFoundException i){
+            logger.error("Wrong data.Id does not exist in database ");
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 
         }
@@ -48,8 +49,10 @@ public class NetworkController {
         Node node = JsonParser.toJavaObject(nodeJson);
 
         try {
+            logger.info("create network controller ");
             networkService.createNetwork(node);
         } catch (HierarchyException |IdNotFoundException h) {
+            logger.error("Wrong data. Hierarchy is not valid or Id does not exist in database ");
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(HttpStatus.OK);
@@ -59,10 +62,12 @@ public class NetworkController {
 
     @PostMapping(path = "/update", consumes = "application/json")
     public ResponseEntity<String> updateNetwork(@RequestBody String nodeJson) {
+        logger.info("update network controller ");
         Node node = JsonParser.toJavaObject(nodeJson);
         try {
             networkService.updateNetwork(node);
         } catch (HierarchyException | IdNotFoundException h) {
+            logger.error("Wrong data. Hierarchy is not valid or Id does not exist in database ");
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(HttpStatus.OK);
@@ -71,21 +76,19 @@ public class NetworkController {
 
     @GetMapping(path = "/search/root")
     public List<Node> searchInRootByName(@RequestParam String name) {
-
-        logger.info("Info level log message");
-        logger.debug("Debug level log message");
-        logger.error("Error level log message");
-
+        logger.info("search in roots network controller. By Name " +name);
         return networkService.searchInRootByName(name);
     }
 
     @GetMapping(path = "/search/node")
     public List<Node> searchInNodesByName(String name, String roodIdentifier) {
         try {
+            logger.info("search in  network controller. By Name " +name + " Root id "+ roodIdentifier);
             return networkService.searchInNodesByName(name, roodIdentifier);
 
         } catch (IdNotFoundException h) {
-           return new ArrayList<Node>();
+            logger.error("Wrong data.Id does not exist in database ");
+            return new ArrayList<>();
         }
     }
 

@@ -1,15 +1,19 @@
 package com.example.demo.services.validators;
 
 import com.example.demo.entity.Node;
-import com.example.demo.services.exeption.HierarchyException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class CreateTransformer implements Validator{
+    Logger logger = LoggerFactory.getLogger(CreateTransformer.class);
+
+    private  enum VALID_PARENTS {
+        NETWORK,
+        SUBSTATION,
+    }
     @Override
-    public boolean hierarchyCheck(Node parentNode) {
-        boolean f1 = parentNode.getType().equalsIgnoreCase("Network");
-        boolean f2 =parentNode.getType().equalsIgnoreCase("Substation");
-        boolean f3 = parentNode.getType().equalsIgnoreCase("Resource");
-        return (f1 ||
-                f2 );
+    public boolean hierarchyIsValid(Node parentNode) {
+        return (parentNode.getType().strip().equalsIgnoreCase(VALID_PARENTS.NETWORK.toString()) ||
+                parentNode.getType().strip().equalsIgnoreCase(VALID_PARENTS.SUBSTATION.toString()));
     }
 }
