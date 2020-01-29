@@ -2,7 +2,7 @@ package com.example.demo.services.validators;
 
 import com.example.demo.entity.Node;
 import com.example.demo.entity.NodeTypes;
-import com.example.demo.services.exeption.HierarchyException;
+import com.example.demo.services.exceptions.HierarchyException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

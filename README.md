@@ -16,11 +16,11 @@ git clone https://github.com/jalpv1/network
 
 # project structure
 
-### package config
+###  config
 This package contains configurations for app , swagger , custom JSON parser.
-### package controllers
+###  controllers
 This package contains controllers layer that serves as facade  for entire application.
-### package services
+###  services
 this package contains services which constitute
 business logic layer.
 
@@ -30,7 +30,7 @@ with database.
 
 ### validation
  classes which verifying that Network is in consistent state  
-## exception
+## exceptions
  Custom exceptions
 ### entities
  Main Entities of application.

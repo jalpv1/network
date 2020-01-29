@@ -1,11 +1,9 @@
 package com.example.demo.dao;
 
-import com.example.demo.controllers.NetworkController;
 import com.example.demo.dao.mappers.NodeMapper;
 import com.example.demo.dao.query.NodeQuery;
 import com.example.demo.entity.Node;
-import com.example.demo.services.exeption.IdNotFoundException;
-import org.apache.logging.log4j.LogManager;
+import com.example.demo.services.exceptions.IdNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
