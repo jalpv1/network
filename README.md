@@ -13,7 +13,7 @@ git clone https://github.com/jalpv1/network
           mvn install
           mvn spring-boot:run
 ```
-
+*  swagger - http://localhost:8080/swagger-ui.html#
 # project structure
 
 ###  config
@@ -25,8 +25,7 @@ this package contains services which constitute
 business logic layer.
 
 ### repositories
-- this package contains repositories which make relations
-with database.
+- this package contains repositories implements data access layer
 
 ### validation
  classes which verifying that Network is in consistent state  

@@ -1,0 +1,3 @@
+2020-01-29 21:09:03,098 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 2956 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 21:09:03,105 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 21:09:03,108 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
