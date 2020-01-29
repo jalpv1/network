@@ -81,7 +81,7 @@ public class NetworkController {
     }
 
     @GetMapping(path = "/search/node")
-    public List<Node> searchInNodesByName(String name, String roodIdentifier) {
+    public  List<Node>  searchInNodesByName(String name, String roodIdentifier) {
         try {
             logger.info("search in  network controller. By Name " +name + " Root id "+ roodIdentifier);
             return networkService.searchInNodesByName(name, roodIdentifier);

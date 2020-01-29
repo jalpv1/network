@@ -560,3 +560,305 @@
 2020-01-29 12:14:09,995 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is network324
 2020-01-29 12:14:10,475 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] get extra params  method. Id in database 328
 2020-01-29 12:14:10,731 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-2] search successfully
+2020-01-29 18:33:09,184 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplicationTests on DESKTOP-IFQK0U3 with PID 9848 (started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 18:33:09,187 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 18:33:09,189 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 18:33:15,411 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplicationTests in 7.984 seconds (JVM running for 14.596)
+2020-01-29 18:34:08,734 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplication on DESKTOP-IFQK0U3 with PID 17844 (E:\Documents\luxoftTaskNetwork\target\classes started by julia in E:\Documents\luxoftTaskNetwork)
+2020-01-29 18:34:08,738 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-01-29 18:34:08,739 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-01-29 18:34:12,055 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplication in 4.74 seconds (JVM running for 7.217)
+2020-01-29 18:34:37,496 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-2] create network controller 
+2020-01-29 18:34:38,365 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] create network  method 
+2020-01-29 18:34:38,366 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-2] create root with 
+2020-01-29 18:34:38,386 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] Create root node method. 
+2020-01-29 18:34:38,396 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] Check root node 
+2020-01-29 18:34:38,397 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] check that type is valid 
+2020-01-29 18:34:38,398 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-2] type is not valid ,throw HierarchyException 
+2020-01-29 18:34:38,400 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-2] Wrong data. Hierarchy is not valid or Id does not exist in database 
+2020-01-29 18:37:24,678 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-5] create network controller 
+2020-01-29 18:37:24,832 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-5] create network  method 
+2020-01-29 18:37:24,836 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-5] create root with 
+2020-01-29 18:37:24,839 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create root node method. 
+2020-01-29 18:37:24,842 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] Check root node 
+2020-01-29 18:37:24,843 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] check that type is valid 
+2020-01-29 18:37:25,129 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create id of the node method. Id in database 331
+2020-01-29 18:37:25,192 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  id created successfully. Id isnetwork331
+2020-01-29 18:37:25,233 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create Hierarchy  method. parent Id in database 0 root Id in database 331 child Id in database 331
+2020-01-29 18:37:25,254 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Hierarchy created successfully 
+2020-01-29 18:37:25,255 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create extra params  method. Id in database 331
+2020-01-29 18:37:25,264 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] extra params  created successfully 
+2020-01-29 18:37:25,267 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node's id in db by id .Id is network331
+2020-01-29 18:37:25,278 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get id of the parent
+2020-01-29 18:37:25,284 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] init Queue  with root's children 
+2020-01-29 18:37:25,286 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get first element of the Queue.
+2020-01-29 18:37:25,297 DEBUG com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create node method. Parent id in dataBase: 331Parent id in dataBase: 331
+2020-01-29 18:37:25,298 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node by id .Id is 331
+2020-01-29 18:37:25,302 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] check that type is valid 
+2020-01-29 18:37:25,304 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] Check hierarchy. Node's type is TRANSFORMER
+2020-01-29 18:37:25,307 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create id of the node method. Id in database 332
+2020-01-29 18:37:25,309 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  id created successfully. Id isTRANSFORMER332
+2020-01-29 18:37:25,310 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create Hierarchy  method. parent Id in database 331 root Id in database 331 child Id in database 332
+2020-01-29 18:37:25,311 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Hierarchy created successfully 
+2020-01-29 18:37:25,312 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] created first element of the Queue.
+2020-01-29 18:37:25,313 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get children of first element of the Queue.
+2020-01-29 18:37:25,314 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node's id in db by id .Id is TRANSFORMER332
+2020-01-29 18:37:25,316 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get id of the parent
+2020-01-29 18:37:25,318 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get first element of the Queue.
+2020-01-29 18:37:25,319 DEBUG com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create node method. Parent id in dataBase: 332Parent id in dataBase: 331
+2020-01-29 18:37:25,320 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node by id .Id is 332
+2020-01-29 18:37:25,322 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] check that type is valid 
+2020-01-29 18:37:25,323 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] Check hierarchy. Node's type is FEEDER
+2020-01-29 18:37:25,326 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create id of the node method. Id in database 333
+2020-01-29 18:37:25,327 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  id created successfully. Id isFEEDER333
+2020-01-29 18:37:25,328 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create Hierarchy  method. parent Id in database 332 root Id in database 331 child Id in database 333
+2020-01-29 18:37:25,330 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Hierarchy created successfully 
+2020-01-29 18:37:25,331 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] created first element of the Queue.
+2020-01-29 18:37:25,331 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get children of first element of the Queue.
+2020-01-29 18:37:25,332 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node's id in db by id .Id is FEEDER333
+2020-01-29 18:37:25,335 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get id of the parent
+2020-01-29 18:37:25,336 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get first element of the Queue.
+2020-01-29 18:37:25,337 DEBUG com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create node method. Parent id in dataBase: 332Parent id in dataBase: 331
+2020-01-29 18:37:25,338 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node by id .Id is 332
+2020-01-29 18:37:25,340 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] check that type is valid 
+2020-01-29 18:37:25,342 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] Check hierarchy. Node's type is FEEDER
+2020-01-29 18:37:25,343 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create id of the node method. Id in database 334
+2020-01-29 18:37:25,345 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  id created successfully. Id isFEEDER334
+2020-01-29 18:37:25,345 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create Hierarchy  method. parent Id in database 332 root Id in database 331 child Id in database 334
+2020-01-29 18:37:25,346 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Hierarchy created successfully 
+2020-01-29 18:37:25,347 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] created first element of the Queue.
+2020-01-29 18:37:25,348 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get children of first element of the Queue.
+2020-01-29 18:37:25,348 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node's id in db by id .Id is FEEDER334
+2020-01-29 18:37:25,350 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get id of the parent
+2020-01-29 18:37:25,351 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get first element of the Queue.
+2020-01-29 18:37:25,352 DEBUG com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create node method. Parent id in dataBase: 333Parent id in dataBase: 331
+2020-01-29 18:37:25,353 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node by id .Id is 333
+2020-01-29 18:37:25,354 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] check that type is valid 
+2020-01-29 18:37:25,355 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] Check hierarchy. Node's type is RESOURCE
+2020-01-29 18:37:25,356 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create id of the node method. Id in database 335
+2020-01-29 18:37:25,358 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  id created successfully. Id isRESOURCE335
+2020-01-29 18:37:25,359 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create extra params  method. Id in database 335
+2020-01-29 18:37:25,362 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] extra params  created successfully 
+2020-01-29 18:37:25,363 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create Hierarchy  method. parent Id in database 333 root Id in database 331 child Id in database 335
+2020-01-29 18:37:25,365 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Hierarchy created successfully 
+2020-01-29 18:37:25,367 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] created first element of the Queue.
+2020-01-29 18:37:25,368 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get first element of the Queue.
+2020-01-29 18:37:25,369 DEBUG com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create node method. Parent id in dataBase: 333Parent id in dataBase: 331
+2020-01-29 18:37:25,371 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node by id .Id is 333
+2020-01-29 18:37:25,373 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] check that type is valid 
+2020-01-29 18:37:25,374 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] Check hierarchy. Node's type is RESOURCE
+2020-01-29 18:37:25,377 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create id of the node method. Id in database 336
+2020-01-29 18:37:25,379 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  id created successfully. Id isRESOURCE336
+2020-01-29 18:37:25,381 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create Hierarchy  method. parent Id in database 333 root Id in database 331 child Id in database 336
+2020-01-29 18:37:25,384 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Hierarchy created successfully 
+2020-01-29 18:37:25,385 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] created first element of the Queue.
+2020-01-29 18:37:25,386 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] get first element of the Queue.
+2020-01-29 18:37:25,387 DEBUG com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create node method. Parent id in dataBase: 334Parent id in dataBase: 331
+2020-01-29 18:37:25,388 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node by id .Id is 334
+2020-01-29 18:37:25,390 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] check that type is valid 
+2020-01-29 18:37:25,391 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] Check hierarchy. Node's type is RESOURCE
+2020-01-29 18:37:25,394 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create id of the node method. Id in database 337
+2020-01-29 18:37:25,397 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  id created successfully. Id isRESOURCE337
+2020-01-29 18:37:25,398 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create extra params  method. Id in database 337
+2020-01-29 18:37:25,402 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] extra params  created successfully 
+2020-01-29 18:37:25,404 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create Hierarchy  method. parent Id in database 334 root Id in database 331 child Id in database 337
+2020-01-29 18:37:25,408 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Hierarchy created successfully 
+2020-01-29 18:37:25,410 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-5] created first element of the Queue.
+2020-01-29 18:37:41,534 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-6] create network controller 
+2020-01-29 18:37:41,749 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-6] create network  method 
+2020-01-29 18:37:41,753 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-6] create root with 
+2020-01-29 18:37:41,754 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create root node method. 
+2020-01-29 18:37:41,755 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] Check root node 
+2020-01-29 18:37:41,756 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] check that type is valid 
+2020-01-29 18:37:41,833 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create id of the node method. Id in database 338
+2020-01-29 18:37:41,848 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  id created successfully. Id isnetwork338
+2020-01-29 18:37:41,850 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create Hierarchy  method. parent Id in database 0 root Id in database 338 child Id in database 338
+2020-01-29 18:37:41,864 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Hierarchy created successfully 
+2020-01-29 18:37:41,867 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create extra params  method. Id in database 338
+2020-01-29 18:37:41,914 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] extra params  created successfully 
+2020-01-29 18:37:41,917 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  get node's id in db by id .Id is network338
+2020-01-29 18:37:41,930 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-6] get id of the parent
+2020-01-29 18:37:41,934 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-6] init Queue  with root's children 
+2020-01-29 18:37:41,934 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-6] get first element of the Queue.
+2020-01-29 18:37:41,935 DEBUG com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create node method. Parent id in dataBase: 338Parent id in dataBase: 338
+2020-01-29 18:37:41,936 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  get node by id .Id is 338
+2020-01-29 18:37:41,938 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] check that type is valid 
+2020-01-29 18:37:41,939 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] Check hierarchy. Node's type is network
+2020-01-29 18:37:41,945 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] hierarchy is not valid,throw HierarchyException 
+2020-01-29 18:37:41,982 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-6] Wrong data. Hierarchy is not valid or Id does not exist in database 
+2020-01-29 18:38:02,796 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-8] create network controller 
+2020-01-29 18:38:03,017 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] create network  method 
+2020-01-29 18:38:03,019 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-8] create root with 
+2020-01-29 18:38:03,020 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create root node method. 
+2020-01-29 18:38:03,023 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] Check root node 
+2020-01-29 18:38:03,024 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] check that type is valid 
+2020-01-29 18:38:03,075 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create id of the node method. Id in database 339
+2020-01-29 18:38:03,078 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  id created successfully. Id isnetwork339
+2020-01-29 18:38:03,084 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create Hierarchy  method. parent Id in database 0 root Id in database 339 child Id in database 339
+2020-01-29 18:38:03,095 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Hierarchy created successfully 
+2020-01-29 18:38:03,099 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create extra params  method. Id in database 339
+2020-01-29 18:38:03,110 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] extra params  created successfully 
+2020-01-29 18:38:03,112 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node's id in db by id .Id is network339
+2020-01-29 18:38:03,118 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-8] get id of the parent
+2020-01-29 18:38:03,119 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-8] init Queue  with root's children 
+2020-01-29 18:38:03,120 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-8] get first element of the Queue.
+2020-01-29 18:38:03,121 DEBUG com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create node method. Parent id in dataBase: 339Parent id in dataBase: 339
+2020-01-29 18:38:03,123 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node by id .Id is 339
+2020-01-29 18:38:03,125 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] check that type is valid 
+2020-01-29 18:38:03,126 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] Check hierarchy. Node's type is Resource
+2020-01-29 18:38:03,131 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create id of the node method. Id in database 340
+2020-01-29 18:38:03,134 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  id created successfully. Id isResource340
+2020-01-29 18:38:03,135 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create Hierarchy  method. parent Id in database 339 root Id in database 339 child Id in database 340
+2020-01-29 18:38:03,138 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Hierarchy created successfully 
+2020-01-29 18:38:03,139 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-8] created first element of the Queue.
+2020-01-29 18:38:03,140 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-8] get children of first element of the Queue.
+2020-01-29 18:38:03,141 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node's id in db by id .Id is Resource340
+2020-01-29 18:38:03,143 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-8] get id of the parent
+2020-01-29 18:38:03,144 DEBUG com.example.demo.services.NetworkService [http-nio-8080-exec-8] get first element of the Queue.
+2020-01-29 18:38:03,145 DEBUG com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Create node method. Parent id in dataBase: 340Parent id in dataBase: 339
+2020-01-29 18:38:03,149 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node by id .Id is 340
+2020-01-29 18:38:03,151 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] check that type is valid 
+2020-01-29 18:38:03,152 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] Check hierarchy. Node's type is FEEDER
+2020-01-29 18:38:03,153 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-8] hierarchy is not valid,throw HierarchyException 
+2020-01-29 18:38:03,157 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-8] Wrong data. Hierarchy is not valid or Id does not exist in database 
+2020-01-29 18:40:03,162 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-10] delete node controller
+2020-01-29 18:40:03,410 INFO com.example.demo.services.NodeService [http-nio-8080-exec-10] Delete node method. Node id: RESOURCE265
+2020-01-29 18:40:03,412 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] delete  node method. 
+2020-01-29 18:40:03,413 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node's id in db by id .Id is RESOURCE265
+2020-01-29 18:40:03,432 ERROR com.example.demo.controllers.NodeController [http-nio-8080-exec-10] Wrong data. Id does not exist in database 
+2020-01-29 18:40:13,969 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-2] delete node controller
+2020-01-29 18:40:14,103 INFO com.example.demo.services.NodeService [http-nio-8080-exec-2] Delete node method. Node id: RESOURCE265
+2020-01-29 18:40:14,105 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2] delete  node method. 
+2020-01-29 18:40:14,105 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-2]  get node's id in db by id .Id is RESOURCE265
+2020-01-29 18:40:14,119 ERROR com.example.demo.controllers.NodeController [http-nio-8080-exec-2] Wrong data. Id does not exist in database 
+2020-01-29 18:40:43,135 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-3] delete node controller
+2020-01-29 18:40:43,262 INFO com.example.demo.services.NodeService [http-nio-8080-exec-3] Delete node method. Node id: RESOURCE265
+2020-01-29 18:40:43,263 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-3] delete  node method. 
+2020-01-29 18:40:43,264 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-3]  get node's id in db by id .Id is RESOURCE265
+2020-01-29 18:40:43,279 ERROR com.example.demo.controllers.NodeController [http-nio-8080-exec-3] Wrong data. Id does not exist in database 
+2020-01-29 18:40:57,921 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-6] delete node controller
+2020-01-29 18:40:58,072 INFO com.example.demo.services.NodeService [http-nio-8080-exec-6] Delete node method. Node id: FEEDER333
+2020-01-29 18:40:58,075 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] delete  node method. 
+2020-01-29 18:40:58,076 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  get node's id in db by id .Id is FEEDER333
+2020-01-29 18:40:58,116 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] delete Hierarchy  method.   Node Id in database 333
+2020-01-29 18:40:58,175 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Hierarchy deleted successfully 
+2020-01-29 18:40:58,195 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  node deleted successfully. 
+2020-01-29 18:41:12,108 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-7] delete node controller
+2020-01-29 18:41:12,244 INFO com.example.demo.services.NodeService [http-nio-8080-exec-7] Delete node method. Node id: RESOURCE336
+2020-01-29 18:41:12,245 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-7] delete  node method. 
+2020-01-29 18:41:12,246 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-7]  get node's id in db by id .Id is RESOURCE336
+2020-01-29 18:41:12,255 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-7] delete Hierarchy  method.   Node Id in database 336
+2020-01-29 18:41:12,266 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-7] Hierarchy deleted successfully 
+2020-01-29 18:41:12,271 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-7]  node deleted successfully. 
+2020-01-29 18:41:25,188 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-8] delete node controller
+2020-01-29 18:41:25,318 INFO com.example.demo.services.NodeService [http-nio-8080-exec-8] Delete node method. Node id: RESOURCE335
+2020-01-29 18:41:25,319 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] delete  node method. 
+2020-01-29 18:41:25,320 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  get node's id in db by id .Id is RESOURCE335
+2020-01-29 18:41:25,330 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] delete Hierarchy  method.   Node Id in database 335
+2020-01-29 18:41:25,339 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8] Hierarchy deleted successfully 
+2020-01-29 18:41:25,351 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-8]  node deleted successfully. 
+2020-01-29 18:41:50,099 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-9] search in  network controller. By Name Big-consumer Root id network331
+2020-01-29 18:41:50,123 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-9] search in network method 
+2020-01-29 18:41:50,124 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-9]  get node's id in db by id .Id is network331
+2020-01-29 18:41:50,609 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-9] search successfully
+2020-01-29 18:41:54,408 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-10] search in  network controller. By Name w Root id network331
+2020-01-29 18:41:54,412 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] search in network method 
+2020-01-29 18:41:54,414 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node's id in db by id .Id is network331
+2020-01-29 18:41:55,251 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] get extra params  method. Id in database 334
+2020-01-29 18:41:55,390 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-10] search successfully
+2020-01-29 18:42:13,196 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-1] update network controller 
+2020-01-29 18:42:13,346 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] update network 
+2020-01-29 18:42:13,352 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] update root node  method. 
+2020-01-29 18:42:13,367 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] update extra params  method. Id in database 0
+2020-01-29 18:42:13,375 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] extra params updated successfully 
+2020-01-29 18:42:13,376 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  node  updated successfully 
+2020-01-29 18:42:13,378 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-1] update root node 
+2020-01-29 18:42:13,378 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node's id in db by id .Id is network317
+2020-01-29 18:42:13,385 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-1] Wrong data. Hierarchy is not valid or Id does not exist in database 
+2020-01-29 18:42:31,665 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-4] search in  network controller. By Name w Root id null
+2020-01-29 18:42:31,666 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-4] search in network method 
+2020-01-29 18:42:31,667 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-4]  get node's id in db by id .Id is null
+2020-01-29 18:42:31,844 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-4] Wrong data.Id does not exist in database 
+2020-01-29 18:42:36,275 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-3] search in  network controller. By Name K Root id null
+2020-01-29 18:42:36,277 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-3] search in network method 
+2020-01-29 18:42:36,278 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-3]  get node's id in db by id .Id is null
+2020-01-29 18:42:36,454 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-3] Wrong data.Id does not exist in database 
+2020-01-29 18:42:44,423 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-5] search in  network controller. By Name yy Root id null
+2020-01-29 18:42:44,425 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-5] search in network method 
+2020-01-29 18:42:44,428 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node's id in db by id .Id is null
+2020-01-29 18:42:44,606 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-5] Wrong data.Id does not exist in database 
+2020-01-29 18:42:57,125 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-6] search in  network controller. By Name YYYYNET Root id null
+2020-01-29 18:42:57,127 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-6] search in network method 
+2020-01-29 18:42:57,127 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  get node's id in db by id .Id is null
+2020-01-29 18:42:57,317 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-6] Wrong data.Id does not exist in database 
+2020-01-29 18:44:27,332 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-9] search in  network controller. By Name YYYYNET Root id null
+2020-01-29 18:44:27,333 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-9] search in network method 
+2020-01-29 18:44:27,334 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-9]  get node's id in db by id .Id is null
+2020-01-29 18:44:27,510 ERROR com.example.demo.controllers.NetworkController [http-nio-8080-exec-9] Wrong data.Id does not exist in database 
+2020-01-29 18:44:33,139 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-10] search in  network controller. By Name YYYYNET Root id network331
+2020-01-29 18:44:33,141 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-10] search in network method 
+2020-01-29 18:44:33,143 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node's id in db by id .Id is network331
+2020-01-29 18:44:33,585 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] get extra params  method. Id in database 331
+2020-01-29 18:44:33,683 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-10] search successfully
+2020-01-29 18:44:49,111 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-1] Create node controller
+2020-01-29 18:44:49,276 INFO com.example.demo.services.NodeService [http-nio-8080-exec-1] Create node method. Parent id :network260 rootId network260
+2020-01-29 18:44:49,277 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node's id in db by id .Id is network260
+2020-01-29 18:44:49,285 ERROR com.example.demo.controllers.NodeController [http-nio-8080-exec-1] Wrong data. Hierarchy is not valid or Id does not exist in database 
+2020-01-29 18:45:37,830 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-4] Create node controller
+2020-01-29 18:45:37,963 INFO com.example.demo.services.NodeService [http-nio-8080-exec-4] Create node method. Parent id :network260 rootId network260
+2020-01-29 18:45:37,964 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-4]  get node's id in db by id .Id is network260
+2020-01-29 18:45:37,970 ERROR com.example.demo.controllers.NodeController [http-nio-8080-exec-4] Wrong data. Hierarchy is not valid or Id does not exist in database 
+2020-01-29 18:45:54,488 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-5] Create node controller
+2020-01-29 18:45:54,751 INFO com.example.demo.services.NodeService [http-nio-8080-exec-5] Create node method. Parent id :network331 rootId network331
+2020-01-29 18:45:54,752 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node's id in db by id .Id is network331
+2020-01-29 18:45:54,764 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node's id in db by id .Id is network331
+2020-01-29 18:45:54,769 DEBUG com.example.demo.dao.NodeRepository [http-nio-8080-exec-5] Create node method. Parent id in dataBase: 331Parent id in dataBase: 331
+2020-01-29 18:45:54,770 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-5]  get node by id .Id is 331
+2020-01-29 18:45:54,772 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] check that type is valid 
+2020-01-29 18:45:54,776 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] Check hierarchy. Node's type is network
+2020-01-29 18:45:54,777 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-5] hierarchy is not valid,throw HierarchyException 
+2020-01-29 18:45:54,781 ERROR com.example.demo.controllers.NodeController [http-nio-8080-exec-5] Wrong data. Hierarchy is not valid or Id does not exist in database 
+2020-01-29 18:46:24,211 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-6] Create node controller
+2020-01-29 18:46:24,354 INFO com.example.demo.services.NodeService [http-nio-8080-exec-6] Create node method. Parent id :network331 rootId network331
+2020-01-29 18:46:24,356 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  get node's id in db by id .Id is network331
+2020-01-29 18:46:24,369 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  get node's id in db by id .Id is network331
+2020-01-29 18:46:24,371 DEBUG com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create node method. Parent id in dataBase: 331Parent id in dataBase: 331
+2020-01-29 18:46:24,372 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  get node by id .Id is 331
+2020-01-29 18:46:24,375 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] check that type is valid 
+2020-01-29 18:46:24,376 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-6] Check hierarchy. Node's type is substation
+2020-01-29 18:46:24,396 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create id of the node method. Id in database 341
+2020-01-29 18:46:24,402 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6]  id created successfully. Id issubstation341
+2020-01-29 18:46:24,403 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create extra params  method. Id in database 341
+2020-01-29 18:46:24,410 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] extra params  created successfully 
+2020-01-29 18:46:24,415 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Create Hierarchy  method. parent Id in database 331 root Id in database 331 child Id in database 341
+2020-01-29 18:46:24,422 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-6] Hierarchy created successfully 
+2020-01-29 18:50:01,730 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-10] update child controller
+2020-01-29 18:50:01,744 INFO com.example.demo.services.NodeService [http-nio-8080-exec-10] Update child method. Parent  id: network339 Child id: Resource340
+2020-01-29 18:50:01,747 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] update node  method. parent Id  network339 child Id  Resource340
+2020-01-29 18:50:01,748 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node's id in db by id .Id is network339
+2020-01-29 18:50:01,984 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node's id in db by id .Id is Resource340
+2020-01-29 18:50:02,287 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node's id in db by id .Id is network339
+2020-01-29 18:50:02,466 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  get node by id .Id is 339
+2020-01-29 18:50:02,561 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] check that type is valid 
+2020-01-29 18:50:02,562 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-10] Check hierarchy. Node's type is RESOURCE
+2020-01-29 18:50:02,770 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] update extra params  method. Id in database 340
+2020-01-29 18:50:02,964 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10] extra params updated successfully 
+2020-01-29 18:50:02,965 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-10]  node  updated successfully 
+2020-01-29 18:50:37,935 INFO com.example.demo.controllers.NodeController [http-nio-8080-exec-1] update child controller
+2020-01-29 18:50:37,937 INFO com.example.demo.services.NodeService [http-nio-8080-exec-1] Update child method. Parent  id: network339 Child id: Resource340
+2020-01-29 18:50:37,938 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] update node  method. parent Id  network339 child Id  Resource340
+2020-01-29 18:50:37,939 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node's id in db by id .Id is network339
+2020-01-29 18:50:38,366 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node's id in db by id .Id is Resource340
+2020-01-29 18:50:38,614 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node's id in db by id .Id is network339
+2020-01-29 18:50:38,821 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  get node by id .Id is 339
+2020-01-29 18:50:38,967 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] check that type is valid 
+2020-01-29 18:50:38,968 INFO com.example.demo.services.validators.ValidatorManager [http-nio-8080-exec-1] Check hierarchy. Node's type is RESOURCE
+2020-01-29 18:50:39,303 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] update extra params  method. Id in database 340
+2020-01-29 18:50:39,590 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1] extra params updated successfully 
+2020-01-29 18:50:39,591 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-1]  node  updated successfully 
+2020-01-29 18:51:48,991 INFO com.example.demo.controllers.NetworkController [http-nio-8080-exec-3] Deleting network with id network338
+2020-01-29 18:51:49,123 INFO com.example.demo.services.NetworkService [http-nio-8080-exec-3] Delete network with id network338
+2020-01-29 18:51:49,130 INFO com.example.demo.dao.NodeRepository [http-nio-8080-exec-3]  get node's id in db by id .Id is network338
+2020-01-29 18:51:49,144 DEBUG com.example.demo.dao.NetworkRepository [http-nio-8080-exec-3] get nodes of network
+2020-01-29 18:51:49,151 DEBUG com.example.demo.dao.NetworkRepository [http-nio-8080-exec-3] delete nodes of network
+2020-01-29 18:51:49,152 INFO com.example.demo.dao.NetworkRepository [http-nio-8080-exec-3] network deleted 

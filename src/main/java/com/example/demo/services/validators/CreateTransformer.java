@@ -8,10 +8,10 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 
 public class CreateTransformer implements Validator{
-    private String[]validParenrs = { NodeTypes.NETWORK.toString(),
+    private String[]validParents = { NodeTypes.NETWORK.toString(),
             NodeTypes.SUBSTATION.toString()};
     @Override
     public boolean hierarchyIsValid(Node parentNode) {
-        return Arrays.asList(validParenrs).contains(parentNode.getType().strip().toUpperCase());
+        return Arrays.asList(validParents).contains(parentNode.getType().strip().toUpperCase());
     }
 }

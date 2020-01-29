@@ -1,4 +1,4 @@
-## how to run application
+# how to run application
 * clone repository in folder
 ```
 git clone https://github.com/jalpv1/network
@@ -6,7 +6,7 @@ git clone https://github.com/jalpv1/network
 * install PosgreSql database
 * run dbcreate.sql to create database
 * run dbinit.sql to add test data in tables.
-* Do this commants in project folder:
+* Do this commands in project folder:
 ```
 
           mvn clean
@@ -14,7 +14,7 @@ git clone https://github.com/jalpv1/network
           mvn spring-boot:run
 ```
 
-##project structure
+# project structure
 
 ### package config
 This package contains configurations for app , swagger , custom JSON parser.
@@ -28,16 +28,16 @@ business logic layer.
 - this package contains repositories which make relations
 with database.
 
-###validation
+### validation
  classes which verifying that Network is in consistent state  
 ## exception
  Custom exceptions
-### Entity
+### entities
  Main Entities of application.
-### Queries
+### queries
  queries which use to get and modify data in database
 
-#Design decisions
+# Design decisions
 1. Network is mapped to relational structure using Child-parent model
 2. API is deigned to prevent loading entire network into memory for performance reasons
 3. Validation is based on Command pattern from GoF
