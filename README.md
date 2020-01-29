@@ -3,7 +3,7 @@
 ```
 git clone https://github.com/jalpv1/network
 ```
-* install PosgreSql database
+* install PostgreSql database
 * run dbcreate.sql to create database
 * run dbinit.sql to add test data in tables.
 * Do this commands in project folder:
