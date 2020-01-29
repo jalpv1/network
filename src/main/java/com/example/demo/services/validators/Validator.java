@@ -1,13 +1,10 @@
 package com.example.demo.services.validators;
 
 import com.example.demo.entity.Node;
+import com.example.demo.entity.NodeTypes;
 
 public interface Validator {
-    enum NOT_VALID_PARENTS {
-        RECOURSE;
-    }
-
     default boolean hierarchyIsValid(Node parentNode) {
-        return !parentNode.getType().strip().equalsIgnoreCase(NOT_VALID_PARENTS.RECOURSE.toString());
+        return !parentNode.getType().strip().equalsIgnoreCase(NodeTypes.RESOURCE.toString());
     }
 }

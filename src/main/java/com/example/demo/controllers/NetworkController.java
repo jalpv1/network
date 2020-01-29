@@ -22,7 +22,7 @@ import java.util.List;
 @RequestMapping("/api/network")
 public class NetworkController {
     private final NetworkService networkService;
-    Logger logger = LoggerFactory.getLogger(NetworkController.class);
+    private Logger logger = LoggerFactory.getLogger(NetworkController.class);
 
     @Autowired
     NetworkController(NetworkService networkService) {

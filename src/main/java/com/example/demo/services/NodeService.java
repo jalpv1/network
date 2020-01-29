@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class NodeService {
     private final NodeRepository nodeRepository;
-    Logger logger = LoggerFactory.getLogger(NodeService.class);
+    private  Logger logger = LoggerFactory.getLogger(NodeService.class);
 
     @Autowired
     public NodeService(NodeRepository nodeRepository) {
@@ -22,7 +22,7 @@ public class NodeService {
 
     @Transactional
     public void createNode(Node node, String parentId, String rootId) throws HierarchyException, IdNotFoundException {
-        logger.info("Create node method. Parent id " + parentId +" rootId "+ rootId);
+        logger.info("Create node method. Parent id :" + parentId +" rootId "+ rootId);
         int parentIdDB = nodeRepository.getIdDBById(parentId);
         int rootIdDB = nodeRepository.getIdDBById(rootId);
         nodeRepository.createNode(node, parentIdDB, rootIdDB);

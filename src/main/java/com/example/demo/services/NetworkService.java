@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 public class NetworkService {
     private final NetworkRepository networkRepository;
     private final NodeRepository nodeRepository;
-    Logger logger = LoggerFactory.getLogger(NetworkService.class);
+    private Logger logger = LoggerFactory.getLogger(NetworkService.class);
 
 
     @Autowired
@@ -35,20 +35,20 @@ public class NetworkService {
 
     @Transactional
     public void createNetwork(Node node) throws HierarchyException, IdNotFoundException {
-        logger.info("create network with id " + node.getId());
-        logger.info("create root with id " + node.getId());
+        logger.info("create network  method ");
+        logger.info("create root with ");
         int rootId = nodeRepository.createNode(node);
         initParentId(node.getChildren(), node.getId());
         Queue<Node> nodes = new ArrayDeque<>(node.getChildren());
-        logger.info("init Queue  with root's children ");
+        logger.debug("init Queue  with root's children ");
         while (!nodes.isEmpty()) {
             Node nodeFirstInQueue = Objects.requireNonNull(nodes.poll());
-            logger.info("get first element of the Queue.");
+            logger.debug("get first element of the Queue.");
 
             nodeRepository.createNode(nodeFirstInQueue, nodeFirstInQueue.getParentId(), rootId);
-            logger.info("created first element of the Queue.");
+            logger.debug("created first element of the Queue.");
             if (!nodeFirstInQueue.getChildren().isEmpty()) {
-                logger.info("get children of first element of the Queue.");
+                logger.debug("get children of first element of the Queue.");
                 initParentId(nodeFirstInQueue.getChildren(), nodeFirstInQueue.getId());
                 nodes.addAll(nodeFirstInQueue.getChildren());
             }
@@ -64,15 +64,15 @@ public class NetworkService {
         Queue<Node> nodes = new ArrayDeque<>(node.getChildren());
         logger.info("init Queue  with root's children ");
         while (!nodes.isEmpty()) {
-            logger.info("get first element of the Queue.");
+            logger.debug("get first element of the Queue.");
             Node nodeFirstInQueue = Objects.requireNonNull(nodes.poll());
 
             nodeRepository.updateChild(nodeRepository.getNodeById(nodeFirstInQueue.getParentId()).getId(),
                     nodeFirstInQueue.getId(), nodeFirstInQueue);
-            logger.info("updated first element of the Queue.");
+            logger.debug("updated first element of the Queue.");
 
             if (!nodeFirstInQueue.getChildren().isEmpty()) {
-                logger.info("get children of first element of the Queue.");
+                logger.debug("get children of first element of the Queue.");
                 initParentId(nodeFirstInQueue.getChildren(), nodeFirstInQueue.getId());
                 nodes.addAll(nodeFirstInQueue.getChildren());
             }
@@ -81,7 +81,7 @@ public class NetworkService {
 
     private void initParentId(List<Node> children, String parentIdentifier) throws IdNotFoundException {
         int parentIdDb = nodeRepository.getIdDBById(parentIdentifier);
-        logger.info("get id of the parent");
+        logger.debug("get id of the parent");
         children.stream().peek((s) -> s.setParentId(parentIdDb)).collect(Collectors.toList());
     }
 

@@ -16,7 +16,7 @@ import com.example.demo.services.NodeService;
 @RequestMapping("/api/node")
 public class NodeController {
     private final NodeService nodeService;
-    Logger logger = LoggerFactory.getLogger(NodeController.class);
+    private Logger logger = LoggerFactory.getLogger(NodeController.class);
 
     @Autowired
     NodeController(NodeService nodeService) {

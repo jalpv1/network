@@ -8,16 +8,6 @@ import java.io.File;
 import java.io.IOException;
 @Component
 public class JsonParser {
-
-
-    /*public static void toJSON(Node user) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.
-        System.out.println("json created!");
-    }
-
-     */
-
     public static Node toJavaObject(String json)  {
         ObjectMapper mapper = new ObjectMapper();
         try {

@@ -1,40 +1,34 @@
 package com.example.demo.services.validators;
 
 import com.example.demo.entity.Node;
+import com.example.demo.entity.NodeTypes;
 import com.example.demo.services.exeption.HierarchyException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 @Component
 public class ValidatorManager {
     private Map<String, Validator> validateMap;
-    Logger logger = LoggerFactory.getLogger(ValidatorManager.class);
+    private  Logger logger = LoggerFactory.getLogger(ValidatorManager.class);
 
     public ValidatorManager() {
         validateMap = new HashMap<>();
-        validateMap.put(VALID_TYPES.NETWORK.toString(), new CreateNetwork());
-        validateMap.put(VALID_TYPES.SUBSTATION.toString(), new CreateSubstation());
-        validateMap.put(VALID_TYPES.TRANSFORMER.toString(), new CreateTransformer());
-        validateMap.put(VALID_TYPES.FEEDER.toString(), new CreateFeeder());
-        validateMap.put(VALID_TYPES.RESOURCE.toString(), new CreateResource());
+        validateMap.put(NodeTypes.NETWORK.toString(), new CreateNetwork());
+        validateMap.put(NodeTypes.SUBSTATION.toString(), new CreateSubstation());
+        validateMap.put(NodeTypes.TRANSFORMER.toString(), new CreateTransformer());
+        validateMap.put(NodeTypes.FEEDER.toString(), new CreateFeeder());
+        validateMap.put(NodeTypes.RESOURCE.toString(), new CreateResource());
     }
-    private  enum VALID_TYPES {
-        NETWORK,
-        SUBSTATION,
-        TRANSFORMER,
-        FEEDER,
-        RESOURCE;
-    }
+    private String[]validChidlren = {NodeTypes.RESOURCE.toString(), NodeTypes.NETWORK.toString(),
+            NodeTypes.SUBSTATION.toString(),
+            NodeTypes.TRANSFORMER.toString(), NodeTypes.FEEDER.toString()};
     private   boolean  typeIsValid (Node node) {
         logger.info("check that type is valid ");
-        return (node.getType().strip().equalsIgnoreCase(VALID_TYPES.RESOURCE.toString())
-                        || (node.getType().strip().equalsIgnoreCase(VALID_TYPES.NETWORK.toString())
-                        || node.getType().strip().equalsIgnoreCase(VALID_TYPES.TRANSFORMER.toString())
-                        || node.getType().strip().equalsIgnoreCase(VALID_TYPES.SUBSTATION.toString())
-                        || node.getType().strip().equalsIgnoreCase(VALID_TYPES.FEEDER.toString())));
+        return Arrays.asList(validChidlren).contains(node.getType().strip().toUpperCase());
     }
     public void validate(Node node,Node parentNode) throws HierarchyException {
         String type = node.getType().toUpperCase();

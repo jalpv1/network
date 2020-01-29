@@ -19,7 +19,7 @@ package com.example.demo.dao;
 
 @Repository
 public class NodeRepository {
-    Logger logger = LoggerFactory.getLogger(NodeRepository.class);
+    private Logger logger = LoggerFactory.getLogger(NodeRepository.class);
 
     private final JdbcTemplate jdbcTemplate;
     private final ValidatorManager validatorManager;
@@ -31,7 +31,7 @@ public class NodeRepository {
     }
 
     public void createNode(Node node, int parentId, int rootId) throws HierarchyException {
-        logger.info("Create node method. Parent id in dataBase: " + parentId + "Parent id in dataBase: " + rootId);
+        logger.debug("Create node method. Parent id in dataBase: " + parentId + "Parent id in dataBase: " + rootId);
         Node parent = getNodeById(parentId);
         validatorManager.validate(node, parent);
         jdbcTemplate.update(NodeQuery.CREATE_NODE, node.getType(), node.getName(),

@@ -1,23 +1,21 @@
 package com.example.demo.services.validators;
 
 import com.example.demo.entity.Node;
+import com.example.demo.entity.NodeTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CreateNetwork implements Validator {
-    Logger logger = LoggerFactory.getLogger(CreateFeeder.class);
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
-    private  enum NOT_VALID_PARENTS {
-        NETWORK,
-        SUBSTATION,
-        TRANSFORMER,
-        FEEDER;
-    }
+public class CreateNetwork implements Validator {
+
+    private String[]types = {NodeTypes.RESOURCE.toString(), NodeTypes.NETWORK.toString(),
+            NodeTypes.SUBSTATION.toString(),
+            NodeTypes.TRANSFORMER.toString(), NodeTypes.FEEDER.toString()};
+
     @Override
     public boolean hierarchyIsValid(Node parentNode) {
-        return !(parentNode.getType().strip().equalsIgnoreCase(NOT_VALID_PARENTS.NETWORK.toString()) ||
-                parentNode.getType().strip().equalsIgnoreCase(NOT_VALID_PARENTS.SUBSTATION.toString())  ||
-                parentNode.getType().strip().equalsIgnoreCase(NOT_VALID_PARENTS.TRANSFORMER.toString())||
-                parentNode.getType().strip().equalsIgnoreCase(NOT_VALID_PARENTS.FEEDER.toString()) );
+        return !(Arrays.asList(types).contains(parentNode.getType().strip().toUpperCase()));
     }
 }

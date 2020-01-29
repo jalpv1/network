@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 public class NetworkRepository {
     private final JdbcTemplate jdbcTemplate;
     private final NodeRepository nodeRepository;
-    Logger logger = LoggerFactory.getLogger(NetworkRepository.class);
+    private Logger logger = LoggerFactory.getLogger(NetworkRepository.class);
 
     @Autowired
     public NetworkRepository(JdbcTemplate jdbcTemplate, NodeRepository nodeRepository) {
@@ -30,10 +30,10 @@ public class NetworkRepository {
     public void deleteNetwork(String rootIdentifier) throws IdNotFoundException {
         Integer rootId = nodeRepository.getIdDBById(rootIdentifier);
         List<Node> networkNodes = jdbcTemplate.query(NodeQuery.SELECT_HIERARCHY_NETWORK_BY_ROOT, new Object[]{rootId}, new NodeMapper());
-       logger.info("get nodes of network");
+       logger.debug("get nodes of network");
         for (Node node : networkNodes) {
             jdbcTemplate.update(NodeQuery.DELETE_NODE, node.getIdDB());
-            logger.info("delete nodes of network");
+            logger.debug("delete nodes of network");
 
 
         }
@@ -44,12 +44,6 @@ public class NetworkRepository {
     public List<Node> searchInRootByName(String name) {
         List<Node> nodes =
                 jdbcTemplate.query(NodeQuery.SELECT_ROOTS + NodeQuery.CONDITION_SEARCH_BY_NAME, new Object[]{"%" + name + "%"}, new NodeMapper());
-       /* for (Node node : nodes) {
-            nodeRepository.getParams(node);
-
-        }
-
-        */
         nodes.stream().peek(nodeRepository::getParams).collect(Collectors.toList());
         logger.info("search successfully");
 
@@ -58,11 +52,6 @@ public class NetworkRepository {
 
     public List<Node> searchInNodesByName(String name, int rootId) {
         List<Node> nodes = jdbcTemplate.query(NodeQuery.SELECT_HIERARCHY_NETWORK_BY_ROOT + NodeQuery.CONDITION_SEARCH_BY_NAME_NODE, new Object[]{rootId, "%" + name + "%"}, new NodeMapper());
-       /* for (Node node : nodes) {
-            nodeRepository.getParams(node);
-        }
-
-        */
         nodes.stream().peek(nodeRepository::getParams).collect(Collectors.toList());
         logger.info("search successfully");
 
