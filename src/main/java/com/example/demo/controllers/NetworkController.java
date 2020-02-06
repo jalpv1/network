@@ -49,7 +49,7 @@ public class NetworkController {
             logger.info("create network controller ");
             networkService.createNetwork(node);
         } catch (HierarchyException |IdNotFoundException h) {
-            logger.error("Wrong data. Hierarchy is not valid or Id does not exist in database ");
+            logger.error("Wrong data.Hierarchy is not valid or Id does not exist in database ");
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(HttpStatus.OK);
@@ -64,7 +64,7 @@ public class NetworkController {
         try {
             networkService.updateNetwork(node);
         } catch (HierarchyException | IdNotFoundException h) {
-            logger.error("Wrong data. Hierarchy is not valid or Id does not exist in database ");
+            logger.error("Wrong data.Hierarchy is not valid or Id does not exist in database ");
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(HttpStatus.OK);
